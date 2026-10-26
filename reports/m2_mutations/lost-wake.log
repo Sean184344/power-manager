@@ -1,0 +1,4 @@
+VCD info: dumpfile build/mutations/lost-wake.vcd opened for output.
+M2 replay: TIMEOUT=8 SEED=17
+FATAL: tb/tb_m2.sv:95: M2: wake enters START state=3 timeout=8
+       Time: 1198000  Scope: tb_m2.check

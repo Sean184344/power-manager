@@ -1,0 +1,4 @@
+VCD info: dumpfile build/mutations/early-clock-stop.vcd opened for output.
+M2 replay: TIMEOUT=8 SEED=17
+FATAL: tb/models/transaction_scoreboard.sv:55: scoreboard: unsafe clock shutdown with outstanding work
+       Time: 226000  Scope: tb_m2.scoreboard

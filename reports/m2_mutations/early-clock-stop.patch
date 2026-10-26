@@ -1,0 +1,11 @@
+--- a/rtl/power_manager.sv
++++ b/rtl/power_manager.sv
+@@ -80,7 +80,7 @@
+         clk_en_o = 1;
+         case (state_q)
+             RUN: begin block_work_o = 0; isolate_o = 0; end
+-            DRAIN: isolate_o = 0;
++            DRAIN: begin isolate_o = 0; if (!idle_i) clk_en_o = 0; end
+             SLEEP: clk_en_o = 0;
+             default: begin end
+         endcase

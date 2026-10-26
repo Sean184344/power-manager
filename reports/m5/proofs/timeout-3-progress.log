@@ -1,0 +1,1047 @@
+
+-- Executing script file `build/formal/timeout-3-progress.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: build/formal/timeout-3-progress.il
+
+2. Executing SAT pass (solving SAT problems in the circuit).
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import set-constraint from init attribute: \wake_wait = 1'0
+Import set-constraint from init attribute: \wake_age = 4'0000
+Import set-constraint from init attribute: \valid = 1'0
+Import set-constraint from init attribute: \start_age = 3'000
+Import set-constraint from init attribute: \slept = 1'0
+Import set-constraint from init attribute: \request_used = 1'0
+Import set-constraint from init attribute: \reached = 12'000000000000
+Import set-constraint from init attribute: \fault_seen = 1'0
+Import set-constraint from init attribute: \drain_age = 3'000
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:76$489_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:73$487_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:72$486_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:70$485_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:69$484_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:66$483_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:65$482_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:64$481_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:63$480_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:62$479_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:61$478_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:60$477_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:59$476_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:58$475_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:57$474_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:56$473_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:49$467_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:46$466_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:45$465_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:26$464_EN = 1'0
+Final init constraint equation: { $formal$formal/power_manager_formal.sv:26$464_EN $formal$formal/power_manager_formal.sv:45$465_EN $formal$formal/power_manager_formal.sv:46$466_EN $formal$formal/power_manager_formal.sv:49$467_EN $formal$formal/power_manager_formal.sv:56$473_EN $formal$formal/power_manager_formal.sv:57$474_EN $formal$formal/power_manager_formal.sv:58$475_EN $formal$formal/power_manager_formal.sv:59$476_EN $formal$formal/power_manager_formal.sv:60$477_EN $formal$formal/power_manager_formal.sv:61$478_EN $formal$formal/power_manager_formal.sv:62$479_EN $formal$formal/power_manager_formal.sv:63$480_EN $formal$formal/power_manager_formal.sv:64$481_EN $formal$formal/power_manager_formal.sv:65$482_EN $formal$formal/power_manager_formal.sv:66$483_EN $formal$formal/power_manager_formal.sv:69$484_EN $formal$formal/power_manager_formal.sv:70$485_EN $formal$formal/power_manager_formal.sv:72$486_EN $formal$formal/power_manager_formal.sv:73$487_EN $formal$formal/power_manager_formal.sv:76$489_EN \drain_age \fault_seen \reached \request_used \slept \start_age \valid \wake_age \wake_wait } = 47'00000000000000000000000000000000000000000000000
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+** Trying induction with length 1 **
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[base case 1] Solving problem with 6143 variables and 16335 clauses..
+Base case for induction length 1 proven.
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[induction step 1] Solving problem with 6087 variables and 16143 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                      Dec       Hex             Bin
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+  init $auto$async2sync.cc:171:execute$1500                               1         1               1
+  init $auto$async2sync.cc:171:execute$1502                               4         4             100
+  init $auto$async2sync.cc:171:execute$1504                               0         0              00
+  init $auto$async2sync.cc:171:execute$1506                               0         0               0
+  init $auto$async2sync.cc:171:execute$1508                               1         1               1
+  init $formal$formal/power_manager_formal.sv:26$464_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:26$464_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:45$465_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:45$465_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:46$466_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:46$466_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:49$467_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:49$467_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:50$468_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:51$469_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:52$470_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:53$471_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:54$472_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:56$473_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:56$473_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:57$474_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:57$474_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:58$475_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:58$475_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:59$476_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:59$476_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:60$477_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:60$477_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:61$478_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:61$478_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:62$479_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:62$479_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:63$480_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:63$480_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:64$481_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:64$481_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:65$482_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:65$482_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:66$483_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:66$483_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:69$484_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:69$484_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:70$485_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:70$485_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:72$486_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:72$486_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:73$487_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:73$487_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:74$488_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:76$489_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:76$489_EN                   0         0               0
+  init $past$formal/power_manager_formal.sv:28$443$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:49$444$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:58$445$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:59$446$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:60$447$0                      3         3             011
+  init $past$formal/power_manager_formal.sv:60$448$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:61$449$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:61$450$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:62$451$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:62$452$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:63$453$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:63$454$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:64$455$0                      3         3             011
+  init $past$formal/power_manager_formal.sv:64$456$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:65$457$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:65$458$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:66$459$0                      5         5             101
+  init $past$formal/power_manager_formal.sv:70$460$0                      0         0             000
+  init \drain_age                                                         4         4             100
+  init \fault_seen                                                        0         0               0
+  init \reached                                                           0         0    000000000000
+  init \request_used                                                      1         1               1
+  init \slept                                                             0         0               0
+  init \start_age                                                         4         4             100
+  init \valid                                                             1         1               1
+  init \wake_age                                                          5         5            0101
+  init \wake_wait                                                         1         1               1
+
+** Trying induction with length 2 **
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[base case 2] Solving problem with 9743 variables and 26269 clauses..
+Base case for induction length 2 proven.
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[induction step 2] Solving problem with 10051 variables and 27289 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                      Dec       Hex             Bin
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+  init $auto$async2sync.cc:171:execute$1500                               1         1               1
+  init $auto$async2sync.cc:171:execute$1502                               4         4             100
+  init $auto$async2sync.cc:171:execute$1504                               3         3              11
+  init $auto$async2sync.cc:171:execute$1506                               0         0               0
+  init $auto$async2sync.cc:171:execute$1508                               0         0               0
+  init $formal$formal/power_manager_formal.sv:26$464_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:26$464_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:45$465_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:45$465_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:46$466_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:46$466_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:49$467_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:49$467_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:50$468_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:51$469_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:52$470_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:53$471_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:54$472_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:56$473_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:56$473_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:57$474_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:57$474_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:58$475_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:58$475_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:59$476_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:59$476_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:60$477_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:60$477_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:61$478_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:61$478_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:62$479_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:62$479_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:63$480_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:63$480_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:64$481_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:64$481_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:65$482_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:65$482_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:66$483_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:66$483_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:69$484_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:69$484_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:70$485_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:70$485_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:72$486_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:72$486_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:73$487_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:73$487_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:74$488_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:76$489_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:76$489_EN                   0         0               0
+  init $past$formal/power_manager_formal.sv:28$443$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:49$444$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:58$445$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:59$446$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:60$447$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:60$448$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:61$449$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:61$450$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:62$451$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:62$452$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:63$453$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:63$454$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:64$455$0                      3         3             011
+  init $past$formal/power_manager_formal.sv:64$456$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:65$457$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:65$458$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:66$459$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:70$460$0                      2         2             010
+  init \drain_age                                                         7         7             111
+  init \fault_seen                                                        0         0               0
+  init \reached                                                          29        1d    000000011101
+  init \request_used                                                      1         1               1
+  init \slept                                                             1         1               1
+  init \start_age                                                         2         2             010
+  init \valid                                                             1         1               1
+  init \wake_age                                                          5         5            0101
+  init \wake_wait                                                         1         1               1
+
+** Trying induction with length 3 **
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[base case 3] Solving problem with 13707 variables and 37415 clauses..
+Base case for induction length 3 proven.
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[induction step 3] Solving problem with 14379 variables and 39647 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                      Dec       Hex             Bin
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+  init $auto$async2sync.cc:171:execute$1500                               0         0               0
+  init $auto$async2sync.cc:171:execute$1502                               1         1             001
+  init $auto$async2sync.cc:171:execute$1504                               1         1              01
+  init $auto$async2sync.cc:171:execute$1506                               0         0               0
+  init $auto$async2sync.cc:171:execute$1508                               0         0               0
+  init $formal$formal/power_manager_formal.sv:26$464_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:26$464_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:45$465_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:45$465_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:46$466_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:46$466_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:49$467_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:49$467_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:50$468_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:51$469_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:52$470_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:53$471_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:54$472_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:56$473_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:56$473_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:57$474_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:57$474_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:58$475_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:58$475_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:59$476_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:59$476_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:60$477_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:60$477_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:61$478_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:61$478_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:62$479_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:62$479_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:63$480_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:63$480_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:64$481_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:64$481_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:65$482_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:65$482_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:66$483_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:66$483_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:69$484_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:69$484_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:70$485_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:70$485_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:72$486_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:72$486_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:73$487_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:73$487_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:74$488_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:76$489_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:76$489_EN                   1         1               1
+  init $past$formal/power_manager_formal.sv:28$443$0                      7         7             111
+  init $past$formal/power_manager_formal.sv:49$444$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:58$445$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:59$446$0                      7         7             111
+  init $past$formal/power_manager_formal.sv:60$447$0                      7         7             111
+  init $past$formal/power_manager_formal.sv:60$448$0                      7         7             111
+  init $past$formal/power_manager_formal.sv:61$449$0                      7         7             111
+  init $past$formal/power_manager_formal.sv:61$450$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:62$451$0                      7         7             111
+  init $past$formal/power_manager_formal.sv:62$452$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:63$453$0                      7         7             111
+  init $past$formal/power_manager_formal.sv:63$454$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:64$455$0                      3         3             011
+  init $past$formal/power_manager_formal.sv:64$456$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:65$457$0                      7         7             111
+  init $past$formal/power_manager_formal.sv:65$458$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:66$459$0                      7         7             111
+  init $past$formal/power_manager_formal.sv:70$460$0                      7         7             111
+  init \drain_age                                                         0         0             000
+  init \fault_seen                                                        1         1               1
+  init \reached                                                          61        3d    000000111101
+  init \request_used                                                      1         1               1
+  init \slept                                                             1         1               1
+  init \start_age                                                         7         7             111
+  init \valid                                                             1         1               1
+  init \wake_age                                                          0         0            0000
+  init \wake_wait                                                         1         1               1
+
+** Trying induction with length 4 **
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[base case 4] Solving problem with 18035 variables and 49773 clauses..
+Base case for induction length 4 proven.
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[induction step 4] Solving problem with 19071 variables and 53217 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                      Dec       Hex             Bin
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+  init $auto$async2sync.cc:171:execute$1500                               0         0               0
+  init $auto$async2sync.cc:171:execute$1502                               1         1             001
+  init $auto$async2sync.cc:171:execute$1504                               0         0              00
+  init $auto$async2sync.cc:171:execute$1506                               0         0               0
+  init $auto$async2sync.cc:171:execute$1508                               0         0               0
+  init $formal$formal/power_manager_formal.sv:26$464_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:26$464_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:45$465_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:45$465_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:46$466_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:46$466_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:49$467_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:49$467_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:50$468_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:51$469_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:52$470_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:53$471_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:54$472_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:56$473_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:56$473_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:57$474_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:57$474_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:58$475_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:58$475_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:59$476_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:59$476_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:60$477_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:60$477_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:61$478_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:61$478_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:62$479_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:62$479_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:63$480_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:63$480_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:64$481_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:64$481_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:65$482_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:65$482_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:66$483_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:66$483_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:69$484_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:69$484_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:70$485_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:70$485_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:72$486_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:72$486_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:73$487_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:73$487_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:74$488_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:76$489_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:76$489_EN                   0         0               0
+  init $past$formal/power_manager_formal.sv:28$443$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:49$444$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:58$445$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:59$446$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:60$447$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:60$448$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:61$449$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:61$450$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:62$451$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:62$452$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:63$453$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:63$454$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:64$455$0                      3         3             011
+  init $past$formal/power_manager_formal.sv:64$456$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:65$457$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:65$458$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:66$459$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:70$460$0                      2         2             010
+  init \drain_age                                                         0         0             000
+  init \fault_seen                                                        1         1               1
+  init \reached                                                          29        1d    000000011101
+  init \request_used                                                      1         1               1
+  init \slept                                                             1         1               1
+  init \start_age                                                         7         7             111
+  init \valid                                                             1         1               1
+  init \wake_age                                                          2         2            0010
+  init \wake_wait                                                         1         1               1
+
+** Trying induction with length 5 **
+
+Setting up time step 6:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[base case 5] Solving problem with 22727 variables and 63343 clauses..
+Base case for induction length 5 proven.
+
+Setting up time step 6:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[induction step 5] Solving problem with 24127 variables and 67999 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                      Dec       Hex             Bin
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+  init $auto$async2sync.cc:171:execute$1500                               0         0               0
+  init $auto$async2sync.cc:171:execute$1502                               3         3             011
+  init $auto$async2sync.cc:171:execute$1504                               2         2              10
+  init $auto$async2sync.cc:171:execute$1506                               1         1               1
+  init $auto$async2sync.cc:171:execute$1508                               1         1               1
+  init $formal$formal/power_manager_formal.sv:26$464_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:26$464_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:45$465_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:45$465_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:46$466_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:46$466_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:49$467_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:49$467_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:50$468_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:51$469_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:52$470_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:53$471_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:54$472_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:56$473_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:56$473_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:57$474_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:57$474_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:58$475_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:58$475_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:59$476_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:59$476_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:60$477_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:60$477_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:61$478_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:61$478_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:62$479_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:62$479_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:63$480_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:63$480_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:64$481_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:64$481_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:65$482_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:65$482_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:66$483_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:66$483_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:69$484_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:69$484_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:70$485_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:70$485_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:72$486_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:72$486_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:73$487_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:73$487_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:74$488_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:76$489_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:76$489_EN                   0         0               0
+  init $past$formal/power_manager_formal.sv:28$443$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:49$444$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:58$445$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:59$446$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:60$447$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:60$448$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:61$449$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:61$450$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:62$451$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:62$452$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:63$453$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:63$454$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:64$455$0                      3         3             011
+  init $past$formal/power_manager_formal.sv:64$456$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:65$457$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:65$458$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:66$459$0                      2         2             010
+  init $past$formal/power_manager_formal.sv:70$460$0                      2         2             010
+  init \drain_age                                                         0         0             000
+  init \fault_seen                                                        1         1               1
+  init \reached                                                          31        1f    000000011111
+  init \request_used                                                      0         0               0
+  init \slept                                                             0         0               0
+  init \start_age                                                         3         3             011
+  init \valid                                                             1         1               1
+  init \wake_age                                                          1         1            0001
+  init \wake_wait                                                         1         1               1
+
+** Trying induction with length 6 **
+
+Setting up time step 7:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[base case 6] Solving problem with 27783 variables and 78125 clauses..
+Base case for induction length 6 proven.
+
+Setting up time step 7:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[induction step 6] Solving problem with 29547 variables and 83993 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                      Dec       Hex             Bin
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+  init $auto$async2sync.cc:171:execute$1500                               0         0               0
+  init $auto$async2sync.cc:171:execute$1502                               1         1             001
+  init $auto$async2sync.cc:171:execute$1504                               3         3              11
+  init $auto$async2sync.cc:171:execute$1506                               0         0               0
+  init $auto$async2sync.cc:171:execute$1508                               0         0               0
+  init $formal$formal/power_manager_formal.sv:26$464_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:26$464_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:45$465_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:45$465_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:46$466_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:46$466_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:49$467_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:49$467_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:50$468_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:51$469_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:52$470_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:53$471_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:54$472_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:56$473_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:56$473_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:57$474_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:57$474_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:58$475_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:58$475_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:59$476_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:59$476_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:60$477_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:60$477_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:61$478_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:61$478_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:62$479_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:62$479_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:63$480_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:63$480_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:64$481_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:64$481_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:65$482_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:65$482_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:66$483_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:66$483_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:69$484_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:69$484_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:70$485_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:70$485_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:72$486_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:72$486_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:73$487_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:73$487_EN                   1         1               1
+  init $formal$formal/power_manager_formal.sv:74$488_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:76$489_CHECK                1         1               1
+  init $formal$formal/power_manager_formal.sv:76$489_EN                   1         1               1
+  init $past$formal/power_manager_formal.sv:28$443$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:49$444$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:58$445$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:59$446$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:60$447$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:60$448$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:61$449$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:61$450$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:62$451$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:62$452$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:63$453$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:63$454$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:64$455$0                      3         3             011
+  init $past$formal/power_manager_formal.sv:64$456$0                      1         1               1
+  init $past$formal/power_manager_formal.sv:65$457$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:65$458$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:66$459$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:70$460$0                      4         4             100
+  init \drain_age                                                         0         0             000
+  init \fault_seen                                                        1         1               1
+  init \reached                                                          63        3f    000000111111
+  init \request_used                                                      1         1               1
+  init \slept                                                             0         0               0
+  init \start_age                                                         3         3             011
+  init \valid                                                             1         1               1
+  init \wake_age                                                          0         0            0000
+  init \wake_wait                                                         1         1               1
+
+** Trying induction with length 7 **
+
+Setting up time step 8:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[base case 7] Solving problem with 33203 variables and 94119 clauses..
+Base case for induction length 7 proven.
+
+Setting up time step 8:
+Final constraint equation: { } = { }
+Imported 344 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:76$489_CHECK when $formal$formal/power_manager_formal.sv:76$489_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:74$488_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+
+[induction step 7] Solving problem with 35331 variables and 101199 clauses..
+Induction step proven: SUCCESS!
+
+                  /$$$$$$      /$$$$$$$$     /$$$$$$$    
+                 /$$__  $$    | $$_____/    | $$__  $$   
+                | $$  \ $$    | $$          | $$  \ $$   
+                | $$  | $$    | $$$$$       | $$  | $$   
+                | $$  | $$    | $$__/       | $$  | $$   
+                | $$/$$ $$    | $$          | $$  | $$   
+                |  $$$$$$/ /$$| $$$$$$$$ /$$| $$$$$$$//$$
+                 \____ $$$|__/|________/|__/|_______/|__/
+                       \__/                              
+

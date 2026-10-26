@@ -1,0 +1,84 @@
+{
+  "tool": "Yosys 0.33 (git sha1 2584903a060)",
+  "mapping": "Yosys generic gates, no Liberty library or physical constraints",
+  "source_sha256": {
+    "rtl/power_manager.sv": "ec469c554ba45835a33289788a0c04b412bddbf12835692eb107d0481951d817",
+    "rtl/cdc_primitives.sv": "f2390cb9ec27b9ec219e1571796575d6109b43befb83ed28b045954bbd0dfc78",
+    "rtl/power_manager_cdc.sv": "629530409e98770665125e06f23950ea3ccf8fdf96867e8ed4f3717b5eaca8cb",
+    "rtl/power_manager_retention.sv": "201281e03274eab7bc02ced4d6b104bd1ca3e1111f2ea24ff634ae082c525ff0"
+  },
+  "designs": [
+    {
+      "top": "power_manager",
+      "cells": 116,
+      "flip_flops": 9,
+      "cell_types": {
+        "$_ANDNOT_": 37,
+        "$_AND_": 2,
+        "$_DFFE_PN0P_": 5,
+        "$_DFFE_PN1P_": 1,
+        "$_DFF_PN0_": 2,
+        "$_DFF_PN1_": 1,
+        "$_MUX_": 1,
+        "$_NAND_": 8,
+        "$_NOR_": 4,
+        "$_NOT_": 11,
+        "$_ORNOT_": 2,
+        "$_OR_": 37,
+        "$_XNOR_": 1,
+        "$_XOR_": 4
+      },
+      "latches": 0,
+      "structural_check": "passed",
+      "script": "build/synthesis/power_manager.ys"
+    },
+    {
+      "top": "power_manager_cdc",
+      "cells": 186,
+      "flip_flops": 40,
+      "cell_types": {
+        "$_ANDNOT_": 47,
+        "$_AND_": 7,
+        "$_DFFE_PN0P_": 10,
+        "$_DFFE_PN1P_": 4,
+        "$_DFF_PN0_": 22,
+        "$_DFF_PN1_": 4,
+        "$_MUX_": 1,
+        "$_NAND_": 13,
+        "$_NOR_": 8,
+        "$_NOT_": 13,
+        "$_ORNOT_": 7,
+        "$_OR_": 42,
+        "$_XNOR_": 3,
+        "$_XOR_": 5
+      },
+      "latches": 0,
+      "structural_check": "passed",
+      "script": "build/synthesis/power_manager_cdc.ys"
+    },
+    {
+      "top": "power_manager_retention",
+      "cells": 577,
+      "flip_flops": 74,
+      "cell_types": {
+        "$_ANDNOT_": 164,
+        "$_AND_": 11,
+        "$_DFFE_PN0P_": 36,
+        "$_DFFE_PN1P_": 2,
+        "$_DFF_PN0_": 34,
+        "$_DFF_PN1_": 2,
+        "$_MUX_": 5,
+        "$_NAND_": 34,
+        "$_NOR_": 17,
+        "$_NOT_": 16,
+        "$_ORNOT_": 10,
+        "$_OR_": 210,
+        "$_XNOR_": 13,
+        "$_XOR_": 23
+      },
+      "latches": 0,
+      "structural_check": "passed",
+      "script": "build/synthesis/power_manager_retention.ys"
+    }
+  ]
+}

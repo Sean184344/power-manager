@@ -1,0 +1,3 @@
+VCD info: dumpfile build/m4/corrupt.vcd opened for output.
+FATAL: tb/models/retention_scoreboard.sv:45: retention scoreboard: restored data mismatch
+       Time: 653000  Scope: tb_m4.scoreboard

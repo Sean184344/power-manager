@@ -1,0 +1,1806 @@
+
+-- Executing script file `build/formal/lost-wake.ys' --
+
+1. Executing Verilog-2005 frontend: build/formal/lost-wake.sv
+Parsing formal SystemVerilog input from `build/formal/lost-wake.sv' to AST representation.
+Generating RTLIL representation for module `\power_manager'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: formal/power_manager_formal.sv
+Parsing formal SystemVerilog input from `formal/power_manager_formal.sv' to AST representation.
+Generating RTLIL representation for module `\power_manager_formal'.
+Successfully finished Verilog frontend.
+Parameter \TIMEOUT = 3
+Parameter \FAIR = 0
+
+3. Executing AST frontend in derive mode using pre-parsed AST for module `\power_manager_formal'.
+Parameter \TIMEOUT = 3
+Parameter \FAIR = 0
+Generating RTLIL representation for module `$paramod$433bb2538356a4accd8e8028d4b33a9d65c19d06\power_manager_formal'.
+
+4. Executing PREP pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1.1. Analyzing design hierarchy..
+Top module:  \power_manager_formal
+Used module:     \power_manager
+Parameter \TIMEOUT_CYCLES = 3
+
+4.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\power_manager'.
+Parameter \TIMEOUT_CYCLES = 3
+Generating RTLIL representation for module `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011'.
+
+4.1.3. Analyzing design hierarchy..
+Top module:  \power_manager_formal
+Used module:     $paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011
+
+4.1.4. Analyzing design hierarchy..
+Top module:  \power_manager_formal
+Used module:     $paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011
+Removing unused module `\power_manager'.
+Removed 1 unused modules.
+Module power_manager_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4.2. Executing PROC pass (convert processes to netlists).
+
+4.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+Cleaned up 1 empty switch.
+
+4.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 13 switch rules as full_case in process $proc$formal/power_manager_formal.sv:23$501 in module power_manager_formal.
+Marked 1 switch rules as full_case in process $proc$build/formal/lost-wake.sv:77$884 in module $paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.
+Marked 4 switch rules as full_case in process $proc$build/formal/lost-wake.sv:53$857 in module $paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.
+Marked 8 switch rules as full_case in process $proc$build/formal/lost-wake.sv:32$853 in module $paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.
+Removed a total of 0 dead cases.
+
+4.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 97 assignments to connections.
+
+4.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$768'.
+  Set init value: \reached = 12'000000000000
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:13$769'.
+  Set init value: \valid = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:14$770'.
+  Set init value: \drain_age = 3'000
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:14$771'.
+  Set init value: \start_age = 3'000
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:15$772'.
+  Set init value: \wake_age = 4'0000
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:16$773'.
+  Set init value: \wake_wait = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:16$774'.
+  Set init value: \slept = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:16$775'.
+  Set init value: \fault_seen = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:16$776'.
+  Set init value: \request_used = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$777'.
+  Set init value: $formal$formal/power_manager_formal.sv:26$464_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$779'.
+  Set init value: $formal$formal/power_manager_formal.sv:45$465_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$781'.
+  Set init value: $formal$formal/power_manager_formal.sv:46$466_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$783'.
+  Set init value: $formal$formal/power_manager_formal.sv:49$467_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$785'.
+  Set init value: $formal$formal/power_manager_formal.sv:50$468_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$787'.
+  Set init value: $formal$formal/power_manager_formal.sv:51$469_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$789'.
+  Set init value: $formal$formal/power_manager_formal.sv:52$470_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$791'.
+  Set init value: $formal$formal/power_manager_formal.sv:53$471_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$793'.
+  Set init value: $formal$formal/power_manager_formal.sv:54$472_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$795'.
+  Set init value: $formal$formal/power_manager_formal.sv:56$473_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$797'.
+  Set init value: $formal$formal/power_manager_formal.sv:57$474_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$799'.
+  Set init value: $formal$formal/power_manager_formal.sv:58$475_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$801'.
+  Set init value: $formal$formal/power_manager_formal.sv:59$476_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$803'.
+  Set init value: $formal$formal/power_manager_formal.sv:60$477_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$805'.
+  Set init value: $formal$formal/power_manager_formal.sv:61$478_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$807'.
+  Set init value: $formal$formal/power_manager_formal.sv:62$479_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$809'.
+  Set init value: $formal$formal/power_manager_formal.sv:63$480_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$811'.
+  Set init value: $formal$formal/power_manager_formal.sv:64$481_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$813'.
+  Set init value: $formal$formal/power_manager_formal.sv:65$482_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$815'.
+  Set init value: $formal$formal/power_manager_formal.sv:66$483_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$817'.
+  Set init value: $formal$formal/power_manager_formal.sv:69$484_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$819'.
+  Set init value: $formal$formal/power_manager_formal.sv:70$485_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$821'.
+  Set init value: $formal$formal/power_manager_formal.sv:72$486_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$823'.
+  Set init value: $formal$formal/power_manager_formal.sv:73$487_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$825'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$488_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$827'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$489_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$829'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$490_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$831'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$491_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$833'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$492_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$835'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$493_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$837'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$494_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$839'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$495_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$841'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$496_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$843'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$497_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$845'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$498_EN = 1'0
+Found init rule in `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$847'.
+  Set init value: $formal$formal/power_manager_formal.sv:90$499_EN = 1'0
+
+4.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:53$857'.
+
+4.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~54 debug messages>
+
+4.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+     1/73: $1$lookahead\reached$500[11:0]$611 [11]
+     2/73: $6$lookahead\reached$500[10:10]$692
+     3/73: $5$lookahead\reached$500[9:9]$687
+     4/73: $4$lookahead\reached$500[8:8]$682
+     5/73: $3$lookahead\reached$500[7:7]$679
+     6/73: $2$lookahead\reached$500[11:0]$668
+     7/73: $2$bitselwrite$data$formal/power_manager_formal.sv:79$462[11:0]$666
+     8/73: $2$bitselwrite$mask$formal/power_manager_formal.sv:79$461[11:0]$665
+     9/73: $2$bitselwrite$sel$formal/power_manager_formal.sv:79$463[2:0]$667
+    10/73: $1$lookahead\reached$500[11:0]$611 [10]
+    11/73: $1$lookahead\reached$500[11:0]$611 [9]
+    12/73: $1$lookahead\reached$500[11:0]$611 [8]
+    13/73: $1$lookahead\reached$500[11:0]$611 [7]
+    14/73: $1$lookahead\reached$500[11:0]$611 [6:0]
+    15/73: $7$lookahead\reached$500[11:11]$694
+    16/73: $1$bitselwrite$sel$formal/power_manager_formal.sv:79$463[2:0]$610
+    17/73: $1$bitselwrite$data$formal/power_manager_formal.sv:79$462[11:0]$609
+    18/73: $1$bitselwrite$mask$formal/power_manager_formal.sv:79$461[11:0]$608
+    19/73: $0$formal$formal/power_manager_formal.sv:26$464_EN[0:0]$524
+    20/73: $0$formal$formal/power_manager_formal.sv:26$464_CHECK[0:0]$523
+    21/73: $0$formal$formal/power_manager_formal.sv:45$465_EN[0:0]$526
+    22/73: $0$formal$formal/power_manager_formal.sv:45$465_CHECK[0:0]$525
+    23/73: $0$formal$formal/power_manager_formal.sv:46$466_EN[0:0]$528
+    24/73: $0$formal$formal/power_manager_formal.sv:46$466_CHECK[0:0]$527
+    25/73: $0$formal$formal/power_manager_formal.sv:49$467_EN[0:0]$530
+    26/73: $0$formal$formal/power_manager_formal.sv:49$467_CHECK[0:0]$529
+    27/73: $0$formal$formal/power_manager_formal.sv:50$468_EN[0:0]$532
+    28/73: $0$formal$formal/power_manager_formal.sv:50$468_CHECK[0:0]$531
+    29/73: $0$formal$formal/power_manager_formal.sv:51$469_EN[0:0]$534
+    30/73: $0$formal$formal/power_manager_formal.sv:51$469_CHECK[0:0]$533
+    31/73: $0$formal$formal/power_manager_formal.sv:52$470_EN[0:0]$536
+    32/73: $0$formal$formal/power_manager_formal.sv:52$470_CHECK[0:0]$535
+    33/73: $0$formal$formal/power_manager_formal.sv:53$471_EN[0:0]$538
+    34/73: $0$formal$formal/power_manager_formal.sv:53$471_CHECK[0:0]$537
+    35/73: $0$formal$formal/power_manager_formal.sv:54$472_EN[0:0]$540
+    36/73: $0$formal$formal/power_manager_formal.sv:54$472_CHECK[0:0]$539
+    37/73: $0$formal$formal/power_manager_formal.sv:56$473_EN[0:0]$542
+    38/73: $0$formal$formal/power_manager_formal.sv:56$473_CHECK[0:0]$541
+    39/73: $0$formal$formal/power_manager_formal.sv:57$474_EN[0:0]$544
+    40/73: $0$formal$formal/power_manager_formal.sv:57$474_CHECK[0:0]$543
+    41/73: $0$formal$formal/power_manager_formal.sv:58$475_EN[0:0]$546
+    42/73: $0$formal$formal/power_manager_formal.sv:58$475_CHECK[0:0]$545
+    43/73: $0$formal$formal/power_manager_formal.sv:59$476_EN[0:0]$548
+    44/73: $0$formal$formal/power_manager_formal.sv:59$476_CHECK[0:0]$547
+    45/73: $0$formal$formal/power_manager_formal.sv:60$477_EN[0:0]$550
+    46/73: $0$formal$formal/power_manager_formal.sv:60$477_CHECK[0:0]$549
+    47/73: $0$formal$formal/power_manager_formal.sv:61$478_EN[0:0]$552
+    48/73: $0$formal$formal/power_manager_formal.sv:61$478_CHECK[0:0]$551
+    49/73: $0$formal$formal/power_manager_formal.sv:62$479_EN[0:0]$554
+    50/73: $0$formal$formal/power_manager_formal.sv:62$479_CHECK[0:0]$553
+    51/73: $0$formal$formal/power_manager_formal.sv:63$480_EN[0:0]$556
+    52/73: $0$formal$formal/power_manager_formal.sv:63$480_CHECK[0:0]$555
+    53/73: $0$formal$formal/power_manager_formal.sv:64$481_EN[0:0]$558
+    54/73: $0$formal$formal/power_manager_formal.sv:64$481_CHECK[0:0]$557
+    55/73: $0$formal$formal/power_manager_formal.sv:65$482_EN[0:0]$560
+    56/73: $0$formal$formal/power_manager_formal.sv:65$482_CHECK[0:0]$559
+    57/73: $0$formal$formal/power_manager_formal.sv:66$483_EN[0:0]$562
+    58/73: $0$formal$formal/power_manager_formal.sv:66$483_CHECK[0:0]$561
+    59/73: $0$formal$formal/power_manager_formal.sv:69$484_EN[0:0]$564
+    60/73: $0$formal$formal/power_manager_formal.sv:69$484_CHECK[0:0]$563
+    61/73: $0$formal$formal/power_manager_formal.sv:70$485_EN[0:0]$566
+    62/73: $0$formal$formal/power_manager_formal.sv:70$485_CHECK[0:0]$565
+    63/73: $0$formal$formal/power_manager_formal.sv:72$486_EN[0:0]$568
+    64/73: $0$formal$formal/power_manager_formal.sv:72$486_CHECK[0:0]$567
+    65/73: $0$formal$formal/power_manager_formal.sv:73$487_EN[0:0]$570
+    66/73: $0$formal$formal/power_manager_formal.sv:73$487_CHECK[0:0]$569
+    67/73: $0\request_used[0:0]
+    68/73: $0\fault_seen[0:0]
+    69/73: $0\slept[0:0]
+    70/73: $0\wake_wait[0:0]
+    71/73: $0\wake_age[3:0]
+    72/73: $0\start_age[2:0]
+    73/73: $0\drain_age[2:0]
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$696'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$699'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$702'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$705'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$708'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$711'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$714'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$717'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$720'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$723'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$726'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$729'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$768'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:13$769'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:14$770'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:14$771'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:15$772'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:16$773'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:16$774'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:16$775'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:16$776'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$777'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$779'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$781'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$783'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$785'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$787'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$789'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$791'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$793'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$795'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$797'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$799'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$801'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$803'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$805'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$807'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$809'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$811'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$813'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$815'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$817'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$819'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$821'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$823'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$825'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$827'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$829'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$831'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$833'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$835'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$837'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$839'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$841'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$843'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$845'.
+Creating decoders for process `\power_manager_formal.$proc$formal/power_manager_formal.sv:0$847'.
+Creating decoders for process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:77$884'.
+     1/3: $1\isolate_o[0:0]
+     2/3: $1\block_work_o[0:0]
+     3/3: $1\clk_en_o[0:0]
+Creating decoders for process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:53$857'.
+     1/5: $0\state_q[2:0]
+     2/5: $0\sleep_armed_q[0:0]
+     3/5: $0\wake_pending_q[0:0]
+     4/5: $0\count_q[1:0]
+     5/5: $0\fault_o[0:0]
+Creating decoders for process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:32$853'.
+     1/8: $8\state_d[2:0]
+     2/8: $7\state_d[2:0]
+     3/8: $6\state_d[2:0]
+     4/8: $5\state_d[2:0]
+     5/8: $4\state_d[2:0]
+     6/8: $3\state_d[2:0]
+     7/8: $2\state_d[2:0]
+     8/8: $1\state_d[2:0]
+
+4.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.\block_work_o' from process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:77$884'.
+No latch inferred for signal `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.\isolate_o' from process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:77$884'.
+No latch inferred for signal `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.\clk_en_o' from process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:77$884'.
+No latch inferred for signal `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.\state_d' from process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:32$853'.
+
+4.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\power_manager_formal.\reached' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1339' with positive edge clock.
+Creating register for signal `\power_manager_formal.\valid' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1340' with positive edge clock.
+Creating register for signal `\power_manager_formal.\drain_age' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1341' with positive edge clock.
+Creating register for signal `\power_manager_formal.\start_age' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1342' with positive edge clock.
+Creating register for signal `\power_manager_formal.\wake_age' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1343' with positive edge clock.
+Creating register for signal `\power_manager_formal.\wake_wait' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1344' with positive edge clock.
+Creating register for signal `\power_manager_formal.\slept' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1345' with positive edge clock.
+Creating register for signal `\power_manager_formal.\fault_seen' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1346' with positive edge clock.
+Creating register for signal `\power_manager_formal.\request_used' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1347' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:28$443$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1348' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:49$444$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1349' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:58$445$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1350' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:59$446$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1351' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:60$447$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1352' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:60$448$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1353' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:61$449$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1354' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:61$450$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1355' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:62$451$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1356' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:62$452$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1357' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:63$453$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1358' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:63$454$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1359' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:64$455$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1360' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:64$456$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1361' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:65$457$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1362' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:65$458$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1363' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:66$459$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1364' with positive edge clock.
+Creating register for signal `\power_manager_formal.$past$formal/power_manager_formal.sv:70$460$0' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1365' with positive edge clock.
+Creating register for signal `\power_manager_formal.$bitselwrite$mask$formal/power_manager_formal.sv:79$461' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1366' with positive edge clock.
+Creating register for signal `\power_manager_formal.$bitselwrite$data$formal/power_manager_formal.sv:79$462' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1367' with positive edge clock.
+Creating register for signal `\power_manager_formal.$bitselwrite$sel$formal/power_manager_formal.sv:79$463' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1368' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:26$464_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1369' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:26$464_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1370' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:45$465_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1371' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:45$465_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1372' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:46$466_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1373' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:46$466_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1374' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:49$467_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1375' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:49$467_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1376' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:50$468_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1377' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:50$468_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1378' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:51$469_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1379' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:51$469_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1380' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:52$470_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1381' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:52$470_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1382' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:53$471_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1383' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:53$471_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1384' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:54$472_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1385' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:54$472_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1386' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:56$473_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1387' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:56$473_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1388' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:57$474_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1389' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:57$474_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1390' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:58$475_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1391' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:58$475_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1392' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:59$476_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1393' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:59$476_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1394' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:60$477_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1395' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:60$477_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1396' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:61$478_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1397' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:61$478_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1398' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:62$479_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1399' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:62$479_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1400' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:63$480_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1401' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:63$480_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1402' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:64$481_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1403' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:64$481_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1404' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:65$482_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1405' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:65$482_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1406' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:66$483_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1407' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:66$483_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1408' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:69$484_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1409' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:69$484_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1410' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:70$485_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1411' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:70$485_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1412' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:72$486_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1413' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:72$486_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1414' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:73$487_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1415' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:73$487_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1416' with positive edge clock.
+Creating register for signal `\power_manager_formal.$lookahead\reached$500' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+  created $dff cell `$procdff$1417' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$488_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$696'.
+  created $dff cell `$procdff$1418' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$488_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$696'.
+  created $dff cell `$procdff$1419' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$489_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$699'.
+  created $dff cell `$procdff$1420' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$489_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$699'.
+  created $dff cell `$procdff$1421' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$490_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$702'.
+  created $dff cell `$procdff$1422' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$490_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$702'.
+  created $dff cell `$procdff$1423' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$491_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$705'.
+  created $dff cell `$procdff$1424' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$491_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$705'.
+  created $dff cell `$procdff$1425' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$492_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$708'.
+  created $dff cell `$procdff$1426' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$492_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$708'.
+  created $dff cell `$procdff$1427' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$493_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$711'.
+  created $dff cell `$procdff$1428' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$493_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$711'.
+  created $dff cell `$procdff$1429' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$494_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$714'.
+  created $dff cell `$procdff$1430' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$494_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$714'.
+  created $dff cell `$procdff$1431' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$495_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$717'.
+  created $dff cell `$procdff$1432' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$495_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$717'.
+  created $dff cell `$procdff$1433' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$496_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$720'.
+  created $dff cell `$procdff$1434' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$496_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$720'.
+  created $dff cell `$procdff$1435' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$497_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$723'.
+  created $dff cell `$procdff$1436' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$497_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$723'.
+  created $dff cell `$procdff$1437' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$498_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$726'.
+  created $dff cell `$procdff$1438' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$498_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$726'.
+  created $dff cell `$procdff$1439' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$499_CHECK' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$729'.
+  created $dff cell `$procdff$1440' with positive edge clock.
+Creating register for signal `\power_manager_formal.$formal$formal/power_manager_formal.sv:90$499_EN' using process `\power_manager_formal.$proc$formal/power_manager_formal.sv:90$729'.
+  created $dff cell `$procdff$1441' with positive edge clock.
+Creating register for signal `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.\fault_o' using process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:53$857'.
+  created $adff cell `$procdff$1442' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.\state_q' using process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:53$857'.
+  created $adff cell `$procdff$1443' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.\count_q' using process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:53$857'.
+  created $adff cell `$procdff$1444' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.\wake_pending_q' using process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:53$857'.
+  created $adff cell `$procdff$1445' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.\sleep_armed_q' using process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:53$857'.
+  created $adff cell `$procdff$1446' with positive edge clock and negative level reset.
+
+4.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 38 empty switches in `\power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:23$501'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$696'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$699'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$702'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$705'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$708'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$711'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$714'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$717'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$720'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$723'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$726'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:90$729'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$768'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:13$769'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:14$770'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:14$771'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:15$772'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:16$773'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:16$774'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:16$775'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:16$776'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$777'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$779'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$781'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$783'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$785'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$787'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$789'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$791'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$793'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$795'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$797'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$799'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$801'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$803'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$805'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$807'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$809'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$811'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$813'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$815'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$817'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$819'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$821'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$823'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$825'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$827'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$829'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$831'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$833'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$835'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$837'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$839'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$841'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$843'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$845'.
+Removing empty process `power_manager_formal.$proc$formal/power_manager_formal.sv:0$847'.
+Found and cleaned up 1 empty switch in `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:77$884'.
+Removing empty process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:77$884'.
+Found and cleaned up 7 empty switches in `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:53$857'.
+Removing empty process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:53$857'.
+Found and cleaned up 8 empty switches in `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:32$853'.
+Removing empty process `$paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.$proc$build/formal/lost-wake.sv:32$853'.
+Cleaned up 54 empty switches.
+
+4.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_formal.
+<suppressed ~19 debug messages>
+Optimizing module $paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.
+<suppressed ~9 debug messages>
+
+4.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\power_manager\TIMEOUT_CYCLES=s32'00000000000000000000000000000011.
+<suppressed ~1 debug messages>
+
+4.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_formal.
+<suppressed ~6 debug messages>
+
+4.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_formal..
+Removed 32 unused cells and 372 unused wires.
+<suppressed ~35 debug messages>
+
+4.6. Executing CHECK pass (checking for obvious problems).
+Checking module power_manager_formal...
+Found and reported 0 problems.
+
+4.7. Executing OPT pass (performing simple optimizations).
+
+4.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_formal.
+
+4.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_formal'.
+<suppressed ~192 debug messages>
+Removed a total of 64 cells.
+
+4.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $flatten\dut.$procmux$1254.
+    dead port 2/2 on $mux $flatten\dut.$procmux$1256.
+    dead port 2/2 on $mux $flatten\dut.$procmux$1264.
+    dead port 2/2 on $mux $flatten\dut.$procmux$1274.
+    dead port 1/2 on $mux $flatten\dut.$procmux$1286.
+    dead port 1/2 on $mux $flatten\dut.$procmux$1289.
+    dead port 2/2 on $mux $flatten\dut.$procmux$1291.
+    dead port 1/2 on $mux $flatten\dut.$procmux$1303.
+    dead port 2/2 on $mux $flatten\dut.$procmux$1305.
+    dead port 2/2 on $mux $flatten\dut.$procmux$1316.
+    dead port 2/2 on $mux $flatten\dut.$procmux$1328.
+    dead port 2/2 on $mux $procmux$892.
+    dead port 2/2 on $mux $procmux$898.
+    dead port 2/2 on $mux $procmux$904.
+    dead port 2/2 on $mux $procmux$910.
+    dead port 2/2 on $mux $procmux$916.
+    dead port 2/2 on $mux $procmux$955.
+Removed 17 multiplexer ports.
+<suppressed ~68 debug messages>
+
+4.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_formal.
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$1219: $auto$opt_reduce.cc:134:opt_pmux$1448
+  Optimizing cells in module \power_manager_formal.
+Performed a total of 1 changes.
+
+4.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_formal'.
+<suppressed ~30 debug messages>
+Removed a total of 10 cells.
+
+4.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_formal..
+Removed 0 unused cells and 91 unused wires.
+<suppressed ~1 debug messages>
+
+4.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_formal.
+<suppressed ~3 debug messages>
+
+4.7.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.7.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~63 debug messages>
+
+4.7.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_formal.
+Performed a total of 0 changes.
+
+4.7.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_formal'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_formal..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+4.7.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_formal.
+
+4.7.14. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.7.15. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~62 debug messages>
+
+4.7.16. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_formal.
+Performed a total of 0 changes.
+
+4.7.17. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_formal'.
+Removed a total of 0 cells.
+
+4.7.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_formal..
+
+4.7.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_formal.
+
+4.7.20. Finished OPT passes. (There is nothing left to do.)
+
+4.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 3) from port B of cell power_manager_formal.$eq$formal/power_manager_formal.sv:28$577 ($eq).
+Removed top 29 bits (of 32) from port B of cell power_manager_formal.$lt$formal/power_manager_formal.sv:30$584 ($lt).
+Removed top 31 bits (of 32) from port B of cell power_manager_formal.$add$formal/power_manager_formal.sv:30$585 ($add).
+Removed top 29 bits (of 32) from port Y of cell power_manager_formal.$add$formal/power_manager_formal.sv:30$585 ($add).
+Removed top 29 bits (of 32) from port B of cell power_manager_formal.$lt$formal/power_manager_formal.sv:32$589 ($lt).
+Removed top 31 bits (of 32) from port B of cell power_manager_formal.$add$formal/power_manager_formal.sv:32$590 ($add).
+Removed top 29 bits (of 32) from port Y of cell power_manager_formal.$add$formal/power_manager_formal.sv:32$590 ($add).
+Removed top 1 bits (of 3) from port B of cell power_manager_formal.$eq$formal/power_manager_formal.sv:36$592 ($eq).
+Removed top 1 bits (of 3) from port B of cell power_manager_formal.$eq$formal/power_manager_formal.sv:45$601 ($eq).
+Removed top 1 bits (of 3) from port B of cell power_manager_formal.$eq$formal/power_manager_formal.sv:46$604 ($eq).
+Removed top 29 bits (of 32) from port B of cell power_manager_formal.$le$formal/power_manager_formal.sv:50$612 ($le).
+Removed top 1 bits (of 3) from port B of cell power_manager_formal.$ne$formal/power_manager_formal.sv:53$617 ($ne).
+Removed top 1 bits (of 3) from port B of cell power_manager_formal.$ne$formal/power_manager_formal.sv:60$635 ($ne).
+Removed top 1 bits (of 3) from port B of cell power_manager_formal.$eq$formal/power_manager_formal.sv:60$637 ($eq).
+Removed top 2 bits (of 3) from port B of cell power_manager_formal.$eq$formal/power_manager_formal.sv:62$641 ($eq).
+Removed top 1 bits (of 3) from port B of cell power_manager_formal.$eq$formal/power_manager_formal.sv:63$644 ($eq).
+Removed top 1 bits (of 3) from port B of cell power_manager_formal.$eq$formal/power_manager_formal.sv:64$647 ($eq).
+Removed top 30 bits (of 32) from port B of cell power_manager_formal.$lt$formal/power_manager_formal.sv:72$661 ($lt).
+Removed top 30 bits (of 32) from port B of cell power_manager_formal.$lt$formal/power_manager_formal.sv:73$663 ($lt).
+Removed top 28 bits (of 32) from port A of cell power_manager_formal.$sub$formal/power_manager_formal.sv:0$669 ($sub).
+Removed top 31 bits (of 32) from port B of cell power_manager_formal.$sub$formal/power_manager_formal.sv:0$669 ($sub).
+Converting cell power_manager_formal.$sub$formal/power_manager_formal.sv:0$669 ($sub) from signed to unsigned.
+Removed top 27 bits (of 32) from port Y of cell power_manager_formal.$sub$formal/power_manager_formal.sv:0$669 ($sub).
+Removed top 1 bits (of 4) from port A of cell power_manager_formal.$sub$formal/power_manager_formal.sv:0$669 ($sub).
+Removed top 1 bits (of 5) from port Y of cell power_manager_formal.$sub$formal/power_manager_formal.sv:0$669 ($sub).
+Removed top 28 bits (of 32) from port A of cell power_manager_formal.$neg$formal/power_manager_formal.sv:0$670 ($neg).
+Removed top 20 bits (of 32) from port Y of cell power_manager_formal.$shift$formal/power_manager_formal.sv:0$674 ($shift).
+Removed top 1 bits (of 3) from port B of cell power_manager_formal.$flatten\dut.$procmux$1275_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell power_manager_formal.$flatten\dut.$eq$build/formal/lost-wake.sv:70$869 ($eq).
+Removed top 2 bits (of 3) from port B of cell power_manager_formal.$flatten\dut.$ne$build/formal/lost-wake.sv:62$860 ($ne).
+Removed top 29 bits (of 32) from wire power_manager_formal.$add$formal/power_manager_formal.sv:30$585_Y.
+Removed top 29 bits (of 32) from wire power_manager_formal.$add$formal/power_manager_formal.sv:32$590_Y.
+Removed top 20 bits (of 32) from wire power_manager_formal.$shift$formal/power_manager_formal.sv:0$674_Y.
+
+4.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_formal..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+4.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.11. Executing OPT pass (performing simple optimizations).
+
+4.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_formal.
+
+4.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_formal'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_formal..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+4.11.4. Finished fast OPT passes.
+
+4.12. Printing statistics.
+
+=== power_manager_formal ===
+
+   Number of wires:                312
+   Number of wire bits:            535
+   Number of public wires:          42
+   Number of public wire bits:      66
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                331
+     $add                            3
+     $adff                           5
+     $and                            1
+     $assert                        21
+     $assume                         3
+     $cover                         12
+     $dff                           80
+     $eq                            21
+     $le                             1
+     $logic_and                     34
+     $logic_not                     11
+     $logic_or                       6
+     $lt                             4
+     $mux                          115
+     $ne                             5
+     $neg                            1
+     $not                            1
+     $or                             2
+     $pmux                           1
+     $reduce_bool                    1
+     $reduce_or                      1
+     $shift                          1
+     $sub                            1
+
+4.13. Executing CHECK pass (checking for obvious problems).
+Checking module power_manager_formal...
+Found and reported 0 problems.
+
+5. Executing ASYNC2SYNC pass.
+Replacing power_manager_formal.$flatten\dut.$procdff$1442 ($adff): ARST=\rst_n, D=$flatten\dut.$0\fault_o[0:0], Q=\dut.fault_o
+Replacing power_manager_formal.$flatten\dut.$procdff$1443 ($adff): ARST=\rst_n, D=\dut.state_d, Q=\dut.state_q
+Replacing power_manager_formal.$flatten\dut.$procdff$1444 ($adff): ARST=\rst_n, D=$flatten\dut.$0\count_q[1:0], Q=\dut.count_q
+Replacing power_manager_formal.$flatten\dut.$procdff$1445 ($adff): ARST=\rst_n, D=$flatten\dut.$0\wake_pending_q[0:0], Q=\dut.wake_pending_q
+Replacing power_manager_formal.$flatten\dut.$procdff$1446 ($adff): ARST=\rst_n, D=$flatten\dut.$0\sleep_armed_q[0:0], Q=\dut.sleep_armed_q
+
+6. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_formal..
+Removed 12 unused cells and 12 unused wires.
+<suppressed ~13 debug messages>
+
+8. Executing SAT pass (solving SAT problems in the circuit).
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:26$464_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:45$465_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:46$466_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:49$467_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:56$473_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:57$474_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:58$475_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:59$476_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:60$477_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:61$478_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:62$479_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:63$480_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:64$481_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:65$482_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:66$483_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:69$484_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:70$485_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:72$486_EN = 1'0
+Import set-constraint from init attribute: $formal$formal/power_manager_formal.sv:73$487_EN = 1'0
+Import set-constraint from init attribute: \drain_age = 3'000
+Import set-constraint from init attribute: \fault_seen = 1'0
+Import set-constraint from init attribute: \reached = 12'000000000000
+Import set-constraint from init attribute: \request_used = 1'0
+Import set-constraint from init attribute: \slept = 1'0
+Import set-constraint from init attribute: \start_age = 3'000
+Import set-constraint from init attribute: \valid = 1'0
+Final init constraint equation: { \valid \start_age \slept \request_used \reached \fault_seen \drain_age $formal$formal/power_manager_formal.sv:73$487_EN $formal$formal/power_manager_formal.sv:72$486_EN $formal$formal/power_manager_formal.sv:70$485_EN $formal$formal/power_manager_formal.sv:69$484_EN $formal$formal/power_manager_formal.sv:66$483_EN $formal$formal/power_manager_formal.sv:65$482_EN $formal$formal/power_manager_formal.sv:64$481_EN $formal$formal/power_manager_formal.sv:63$480_EN $formal$formal/power_manager_formal.sv:62$479_EN $formal$formal/power_manager_formal.sv:61$478_EN $formal$formal/power_manager_formal.sv:60$477_EN $formal$formal/power_manager_formal.sv:59$476_EN $formal$formal/power_manager_formal.sv:58$475_EN $formal$formal/power_manager_formal.sv:57$474_EN $formal$formal/power_manager_formal.sv:56$473_EN $formal$formal/power_manager_formal.sv:49$467_EN $formal$formal/power_manager_formal.sv:46$466_EN $formal$formal/power_manager_formal.sv:45$465_EN $formal$formal/power_manager_formal.sv:26$464_EN } = 41'00000000000000000000000000000000000000000
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 6:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 7:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 8:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 9:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 10:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 11:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 12:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 13:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 14:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 15:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 16:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 17:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 18:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 19:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 20:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 21:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 22:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 23:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+
+Setting up time step 24:
+Final constraint equation: { } = { }
+Imported 317 cells to SAT database.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:26$464_CHECK when $formal$formal/power_manager_formal.sv:26$464_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:45$465_CHECK when $formal$formal/power_manager_formal.sv:45$465_EN.
+Import constraint from assume cell: $formal$formal/power_manager_formal.sv:46$466_CHECK when $formal$formal/power_manager_formal.sv:46$466_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:49$467_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:50$468_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:51$469_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:52$470_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:53$471_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:54$472_CHECK when $formal$formal/power_manager_formal.sv:49$467_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:56$473_CHECK when $formal$formal/power_manager_formal.sv:56$473_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:57$474_CHECK when $formal$formal/power_manager_formal.sv:57$474_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:58$475_CHECK when $formal$formal/power_manager_formal.sv:58$475_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:59$476_CHECK when $formal$formal/power_manager_formal.sv:59$476_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:60$477_CHECK when $formal$formal/power_manager_formal.sv:60$477_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:61$478_CHECK when $formal$formal/power_manager_formal.sv:61$478_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:62$479_CHECK when $formal$formal/power_manager_formal.sv:62$479_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:63$480_CHECK when $formal$formal/power_manager_formal.sv:63$480_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:64$481_CHECK when $formal$formal/power_manager_formal.sv:64$481_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:65$482_CHECK when $formal$formal/power_manager_formal.sv:65$482_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:66$483_CHECK when $formal$formal/power_manager_formal.sv:66$483_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:69$484_CHECK when $formal$formal/power_manager_formal.sv:69$484_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:70$485_CHECK when $formal$formal/power_manager_formal.sv:70$485_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:72$486_CHECK when $formal$formal/power_manager_formal.sv:72$486_EN.
+Import proof for assert: $formal$formal/power_manager_formal.sv:73$487_CHECK when $formal$formal/power_manager_formal.sv:73$487_EN.
+Import show expression: \clk
+Import show expression: \idle
+Import show expression: \ready
+Import show expression: \rst_n
+Import show expression: \sleep_req
+Import show expression: \wake
+Import show expression: \reached
+
+Solving problem with 70727 variables and 190480 clauses..
+SAT proof finished - model found: FAIL!
+
+   ______                   ___       ___       _ _            _ _ 
+  (_____ \                 / __)     / __)     (_) |          | | |
+   _____) )___ ___   ___ _| |__    _| |__ _____ _| | _____  __| | |
+  |  ____/ ___) _ \ / _ (_   __)  (_   __|____ | | || ___ |/ _  |_|
+  | |   | |  | |_| | |_| || |       | |  / ___ | | || ____( (_| |_ 
+  |_|   |_|   \___/ \___/ |_|       |_|  \_____|_|\_)_____)\____|_|
+
+
+  Time Signal Name                                                      Dec       Hex             Bin
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+  init $auto$async2sync.cc:171:execute$1452                               0         0               0
+  init $auto$async2sync.cc:171:execute$1454                               0         0             000
+  init $auto$async2sync.cc:171:execute$1456                               0         0              00
+  init $auto$async2sync.cc:171:execute$1458                               0         0               0
+  init $auto$async2sync.cc:171:execute$1460                               0         0               0
+  init $formal$formal/power_manager_formal.sv:26$464_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:26$464_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:45$465_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:45$465_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:46$466_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:46$466_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:49$467_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:49$467_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:50$468_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:51$469_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:52$470_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:53$471_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:54$472_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:56$473_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:56$473_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:57$474_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:57$474_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:58$475_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:58$475_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:59$476_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:59$476_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:60$477_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:60$477_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:61$478_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:61$478_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:62$479_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:62$479_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:63$480_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:63$480_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:64$481_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:64$481_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:65$482_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:65$482_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:66$483_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:66$483_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:69$484_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:69$484_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:70$485_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:70$485_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:72$486_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:72$486_EN                   0         0               0
+  init $formal$formal/power_manager_formal.sv:73$487_CHECK                0         0               0
+  init $formal$formal/power_manager_formal.sv:73$487_EN                   0         0               0
+  init $past$formal/power_manager_formal.sv:28$443$0                      4         4             100
+  init $past$formal/power_manager_formal.sv:49$444$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:58$445$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:59$446$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:60$447$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:60$448$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:61$449$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:61$450$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:62$451$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:62$452$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:63$453$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:63$454$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:64$455$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:64$456$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:65$457$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:65$458$0                      0         0               0
+  init $past$formal/power_manager_formal.sv:66$459$0                      0         0             000
+  init $past$formal/power_manager_formal.sv:70$460$0                      1         1             001
+  init \drain_age                                                         0         0             000
+  init \fault_seen                                                        0         0               0
+  init \reached                                                           0         0    000000000000
+  init \request_used                                                      0         0               0
+  init \slept                                                             0         0               0
+  init \start_age                                                         0         0             000
+  init \valid                                                             0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+     1 \clk                                                               0         0               0
+     1 \idle                                                              1         1               1
+     1 \reached                                                           0         0    000000000000
+     1 \ready                                                             0         0               0
+     1 \rst_n                                                             0         0               0
+     1 \sleep_req                                                         1         1               1
+     1 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+     2 \clk                                                               0         0               0
+     2 \idle                                                              1         1               1
+     2 \reached                                                           0         0    000000000000
+     2 \ready                                                             1         1               1
+     2 \rst_n                                                             1         1               1
+     2 \sleep_req                                                         1         1               1
+     2 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+     3 \clk                                                               0         0               0
+     3 \idle                                                              1         1               1
+     3 \reached                                                           0         0    000000000000
+     3 \ready                                                             0         0               0
+     3 \rst_n                                                             1         1               1
+     3 \sleep_req                                                         1         1               1
+     3 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+     4 \clk                                                               0         0               0
+     4 \idle                                                              1         1               1
+     4 \reached                                                          32        20    000000100000
+     4 \ready                                                             0         0               0
+     4 \rst_n                                                             1         1               1
+     4 \sleep_req                                                         0         0               0
+     4 \wake                                                              1         1               1
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+     5 \clk                                                               0         0               0
+     5 \idle                                                              0         0               0
+     5 \reached                                                          33        21    000000100001
+     5 \ready                                                             1         1               1
+     5 \rst_n                                                             1         1               1
+     5 \sleep_req                                                         1         1               1
+     5 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+     6 \clk                                                               0         0               0
+     6 \idle                                                              0         0               0
+     6 \reached                                                          33        21    000000100001
+     6 \ready                                                             0         0               0
+     6 \rst_n                                                             1         1               1
+     6 \sleep_req                                                         1         1               1
+     6 \wake                                                              1         1               1
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+     7 \clk                                                               0         0               0
+     7 \idle                                                              0         0               0
+     7 \reached                                                          35        23    000000100011
+     7 \ready                                                             0         0               0
+     7 \rst_n                                                             1         1               1
+     7 \sleep_req                                                         0         0               0
+     7 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+     8 \clk                                                               0         0               0
+     8 \idle                                                              0         0               0
+     8 \reached                                                          35        23    000000100011
+     8 \ready                                                             0         0               0
+     8 \rst_n                                                             1         1               1
+     8 \sleep_req                                                         1         1               1
+     8 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+     9 \clk                                                               0         0               0
+     9 \idle                                                              0         0               0
+     9 \reached                                                          35        23    000000100011
+     9 \ready                                                             1         1               1
+     9 \rst_n                                                             1         1               1
+     9 \sleep_req                                                         1         1               1
+     9 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    10 \clk                                                               0         0               0
+    10 \idle                                                              0         0               0
+    10 \reached                                                          35        23    000000100011
+    10 \ready                                                             0         0               0
+    10 \rst_n                                                             1         1               1
+    10 \sleep_req                                                         1         1               1
+    10 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    11 \clk                                                               0         0               0
+    11 \idle                                                              1         1               1
+    11 \reached                                                          35        23    000000100011
+    11 \ready                                                             0         0               0
+    11 \rst_n                                                             1         1               1
+    11 \sleep_req                                                         1         1               1
+    11 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    12 \clk                                                               0         0               0
+    12 \idle                                                              0         0               0
+    12 \reached                                                          35        23    000000100011
+    12 \ready                                                             1         1               1
+    12 \rst_n                                                             1         1               1
+    12 \sleep_req                                                         1         1               1
+    12 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    13 \clk                                                               0         0               0
+    13 \idle                                                              1         1               1
+    13 \reached                                                          39        27    000000100111
+    13 \ready                                                             1         1               1
+    13 \rst_n                                                             1         1               1
+    13 \sleep_req                                                         1         1               1
+    13 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    14 \clk                                                               0         0               0
+    14 \idle                                                              1         1               1
+    14 \reached                                                          47        2f    000000101111
+    14 \ready                                                             1         1               1
+    14 \rst_n                                                             1         1               1
+    14 \sleep_req                                                         1         1               1
+    14 \wake                                                              1         1               1
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    15 \clk                                                               0         0               0
+    15 \idle                                                              1         1               1
+    15 \reached                                                          47        2f    000000101111
+    15 \ready                                                             0         0               0
+    15 \rst_n                                                             1         1               1
+    15 \sleep_req                                                         0         0               0
+    15 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    16 \clk                                                               0         0               0
+    16 \idle                                                              1         1               1
+    16 \reached                                                          47        2f    000000101111
+    16 \ready                                                             0         0               0
+    16 \rst_n                                                             0         0               0
+    16 \sleep_req                                                         1         1               1
+    16 \wake                                                              1         1               1
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    17 \clk                                                               0         0               0
+    17 \idle                                                              1         1               1
+    17 \reached                                                          47        2f    000000101111
+    17 \ready                                                             0         0               0
+    17 \rst_n                                                             1         1               1
+    17 \sleep_req                                                         1         1               1
+    17 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    18 \clk                                                               0         0               0
+    18 \idle                                                              1         1               1
+    18 \reached                                                          47        2f    000000101111
+    18 \ready                                                             0         0               0
+    18 \rst_n                                                             1         1               1
+    18 \sleep_req                                                         1         1               1
+    18 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    19 \clk                                                               0         0               0
+    19 \idle                                                              1         1               1
+    19 \reached                                                          63        3f    000000111111
+    19 \ready                                                             0         0               0
+    19 \rst_n                                                             1         1               1
+    19 \sleep_req                                                         1         1               1
+    19 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    20 \clk                                                               0         0               0
+    20 \idle                                                              1         1               1
+    20 \reached                                                          63        3f    000000111111
+    20 \ready                                                             0         0               0
+    20 \rst_n                                                             1         1               1
+    20 \sleep_req                                                         1         1               1
+    20 \wake                                                              0         0               0
+  ---- -------------------------------------------------------- ----------- --------- ---------------
+    21 \clk                                          ERROR: Called with -verify and proof did fail!

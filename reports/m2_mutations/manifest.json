@@ -1,0 +1,73 @@
+{
+  "seed": 17,
+  "timeout": "default (8)",
+  "source_sha256": {
+    "rtl/power_manager.sv": "ec469c554ba45835a33289788a0c04b412bddbf12835692eb107d0481951d817",
+    "tb/models/managed_workload.sv": "8b61557ec8767ddceabb5c71ead1c5da230df88b7cc15d61fb2f13f09b1808f3",
+    "tb/models/transaction_scoreboard.sv": "5e7697a58ab59ccf445ab2dc4ab39571f1115bf2053d67d19ed9f8970ba4f14e",
+    "tb/models/clock_controller.sv": "b68e0deb54a2083a61b88f5536d60703d23592d81b74b68d103e1184cc0377b6",
+    "tb/tb_m2.sv": "25231983e2e4f392fe3c237a0553b12f99bcea97f5427a8ba74351d07e20689d"
+  },
+  "mutations": [
+    {
+      "name": "lost-wake",
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "tb_m2",
+        "-DUSE_DEFAULT_TIMEOUT",
+        "-o",
+        "build/mutations/lost-wake.vvp",
+        "build/mutations/lost-wake.sv",
+        "tb/models/managed_workload.sv",
+        "tb/models/transaction_scoreboard.sv",
+        "tb/models/clock_controller.sv",
+        "tb/tb_m2.sv"
+      ],
+      "run_command": [
+        "vvp",
+        "build/mutations/lost-wake.vvp",
+        "+SEED=17",
+        "+COVERAGE=build/mutations/lost-wake.csv",
+        "+VCD=build/mutations/lost-wake.vcd"
+      ],
+      "exit_status": 1,
+      "expected_diagnostic": "M2: wake enters START"
+    },
+    {
+      "name": "early-clock-stop",
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "tb_m2",
+        "-DUSE_DEFAULT_TIMEOUT",
+        "-o",
+        "build/mutations/early-clock-stop.vvp",
+        "build/mutations/early-clock-stop.sv",
+        "tb/models/managed_workload.sv",
+        "tb/models/transaction_scoreboard.sv",
+        "tb/models/clock_controller.sv",
+        "tb/tb_m2.sv"
+      ],
+      "run_command": [
+        "vvp",
+        "build/mutations/early-clock-stop.vvp",
+        "+SEED=17",
+        "+COVERAGE=build/mutations/early-clock-stop.csv",
+        "+VCD=build/mutations/early-clock-stop.vcd"
+      ],
+      "exit_status": 1,
+      "expected_diagnostic": "scoreboard: unsafe clock shutdown with outstanding work"
+    }
+  ],
+  "control_command": [
+    "vvp",
+    "build/mutations/control.vvp",
+    "+SEED=17",
+    "+COVERAGE=build/mutations/control.csv"
+  ]
+}

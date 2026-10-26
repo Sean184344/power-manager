@@ -1,0 +1,489 @@
+{
+  "source_sha256": {
+    "rtl/power_manager.sv": "ec469c554ba45835a33289788a0c04b412bddbf12835692eb107d0481951d817",
+    "formal/power_manager_formal.sv": "03e0b9ab73e51ee8a0dcbe4912bc6c900c1091deb3ac99665f9b9e305f7d54c9"
+  },
+  "engine": "Yosys built-in SAT with temporal induction",
+  "proofs": [
+    {
+      "timeout": 1,
+      "mode": "safety",
+      "status": "proven",
+      "induction_length": 3,
+      "script": "build/formal/timeout-1-safety.ys"
+    },
+    {
+      "timeout": 1,
+      "mode": "progress",
+      "status": "proven",
+      "induction_length": 5,
+      "script": "build/formal/timeout-1-progress.ys"
+    },
+    {
+      "timeout": 2,
+      "mode": "safety",
+      "status": "proven",
+      "induction_length": 3,
+      "script": "build/formal/timeout-2-safety.ys"
+    },
+    {
+      "timeout": 2,
+      "mode": "progress",
+      "status": "proven",
+      "induction_length": 6,
+      "script": "build/formal/timeout-2-progress.ys"
+    },
+    {
+      "timeout": 3,
+      "mode": "safety",
+      "status": "proven",
+      "induction_length": 5,
+      "script": "build/formal/timeout-3-safety.ys"
+    },
+    {
+      "timeout": 3,
+      "mode": "progress",
+      "status": "proven",
+      "induction_length": 7,
+      "script": "build/formal/timeout-3-progress.ys"
+    },
+    {
+      "timeout": 8,
+      "mode": "safety",
+      "status": "proven",
+      "induction_length": 9,
+      "script": "build/formal/timeout-8-safety.ys"
+    },
+    {
+      "timeout": 8,
+      "mode": "progress",
+      "status": "proven",
+      "induction_length": 12,
+      "script": "build/formal/timeout-8-progress.ys"
+    }
+  ],
+  "covers": [
+    {
+      "timeout": 1,
+      "scenario": "RUN",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-RUN.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "DRAIN",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-DRAIN.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "ISOLATE",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-ISOLATE.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "SLEEP",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-SLEEP.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "START",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-START.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "RELEASE",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-RELEASE.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "FAULT",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-FAULT.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "sleep_wake_round_trip",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-sleep_wake_round_trip.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "drain_timeout_recovery",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-drain_timeout_recovery.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "ready_on_deadline",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-ready_on_deadline.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "wake_on_deadline",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-wake_on_deadline.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "reset_after_fault",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-cover-reset_after_fault.vcd"
+    },
+    {
+      "timeout": 1,
+      "scenario": "sleep_wake_round_trip",
+      "status": "reached",
+      "mode": "progress",
+      "search_depth": 18,
+      "witness": "build/formal/timeout-1-progress-cover.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "RUN",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-RUN.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "DRAIN",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-DRAIN.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "ISOLATE",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-ISOLATE.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "SLEEP",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-SLEEP.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "START",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-START.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "RELEASE",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-RELEASE.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "FAULT",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-FAULT.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "sleep_wake_round_trip",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-sleep_wake_round_trip.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "drain_timeout_recovery",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-drain_timeout_recovery.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "ready_on_deadline",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-ready_on_deadline.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "wake_on_deadline",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-wake_on_deadline.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "reset_after_fault",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-cover-reset_after_fault.vcd"
+    },
+    {
+      "timeout": 2,
+      "scenario": "sleep_wake_round_trip",
+      "status": "reached",
+      "mode": "progress",
+      "search_depth": 20,
+      "witness": "build/formal/timeout-2-progress-cover.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "RUN",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-RUN.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "DRAIN",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-DRAIN.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "ISOLATE",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-ISOLATE.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "SLEEP",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-SLEEP.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "START",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-START.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "RELEASE",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-RELEASE.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "FAULT",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-FAULT.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "sleep_wake_round_trip",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-sleep_wake_round_trip.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "drain_timeout_recovery",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-drain_timeout_recovery.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "ready_on_deadline",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-ready_on_deadline.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "wake_on_deadline",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-wake_on_deadline.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "reset_after_fault",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-cover-reset_after_fault.vcd"
+    },
+    {
+      "timeout": 3,
+      "scenario": "sleep_wake_round_trip",
+      "status": "reached",
+      "mode": "progress",
+      "search_depth": 22,
+      "witness": "build/formal/timeout-3-progress-cover.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "RUN",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-RUN.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "DRAIN",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-DRAIN.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "ISOLATE",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-ISOLATE.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "SLEEP",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-SLEEP.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "START",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-START.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "RELEASE",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-RELEASE.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "FAULT",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-FAULT.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "sleep_wake_round_trip",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-sleep_wake_round_trip.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "drain_timeout_recovery",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-drain_timeout_recovery.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "ready_on_deadline",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-ready_on_deadline.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "wake_on_deadline",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-wake_on_deadline.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "reset_after_fault",
+      "status": "reached",
+      "mode": "safety",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-cover-reset_after_fault.vcd"
+    },
+    {
+      "timeout": 8,
+      "scenario": "sleep_wake_round_trip",
+      "status": "reached",
+      "mode": "progress",
+      "search_depth": 32,
+      "witness": "build/formal/timeout-8-progress-cover.vcd"
+    }
+  ],
+  "tool": "Yosys 0.33 (git sha1 2584903a060)",
+  "negative_control": {
+    "mutation": "lost SLEEP wake transition",
+    "status": "detected",
+    "witness": "build/formal/lost-wake.vcd"
+  }
+}

@@ -1,0 +1,4 @@
+M2 replay: TIMEOUT=8 SEED=17
+PASS: scoreboard accepted=107 completed=107 reset-canceled=0 outstanding=0
+PASS: M2 timeout=8 seed=17 checks=1517 accepted=107 completed=107
+tb/tb_m2.sv:259: $finish called at 21928000 (1ps)

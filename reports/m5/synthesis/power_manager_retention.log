@@ -1,0 +1,1005 @@
+
+-- Executing script file `build/synthesis/power_manager_retention.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/power_manager.sv
+Parsing SystemVerilog input from `rtl/power_manager.sv' to AST representation.
+Generating RTLIL representation for module `\power_manager'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/cdc_primitives.sv
+Parsing SystemVerilog input from `rtl/cdc_primitives.sv' to AST representation.
+Generating RTLIL representation for module `\cdc_level'.
+Generating RTLIL representation for module `\cdc_reset'.
+Generating RTLIL representation for module `\cdc_event'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/power_manager_cdc.sv
+Parsing SystemVerilog input from `rtl/power_manager_cdc.sv' to AST representation.
+Generating RTLIL representation for module `\power_manager_cdc'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: rtl/power_manager_retention.sv
+Parsing SystemVerilog input from `rtl/power_manager_retention.sv' to AST representation.
+Generating RTLIL representation for module `\power_manager_retention'.
+Successfully finished Verilog frontend.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \power_manager_retention
+Used module:     \cdc_level
+Used module:     \cdc_event
+Used module:     \cdc_reset
+Parameter \RESET_VALUE = 1'1
+
+5.2. Executing AST frontend in derive mode using pre-parsed AST for module `\cdc_level'.
+Parameter \RESET_VALUE = 1'1
+Generating RTLIL representation for module `$paramod\cdc_level\RESET_VALUE=1'1'.
+
+5.3. Analyzing design hierarchy..
+Top module:  \power_manager_retention
+Used module:     \cdc_level
+Used module:     $paramod\cdc_level\RESET_VALUE=1'1
+Used module:     \cdc_event
+Used module:     \cdc_reset
+
+5.4. Analyzing design hierarchy..
+Top module:  \power_manager_retention
+Used module:     \cdc_level
+Used module:     $paramod\cdc_level\RESET_VALUE=1'1
+Used module:     \cdc_event
+Used module:     \cdc_reset
+Removing unused module `\power_manager_cdc'.
+Removing unused module `\power_manager'.
+Removed 2 unused modules.
+
+6. Executing PROC pass (convert processes to netlists).
+
+6.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\power_manager_retention.$proc$rtl/power_manager_retention.sv:0$152'.
+Removing empty process `power_manager_retention.$proc$rtl/power_manager_retention.sv:0$152'.
+Cleaned up 1 empty switch.
+
+6.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/cdc_primitives.sv:8$153 in module $paramod\cdc_level\RESET_VALUE=1'1.
+Marked 1 switch rules as full_case in process $proc$rtl/cdc_primitives.sv:43$49 in module cdc_event.
+Marked 2 switch rules as full_case in process $proc$rtl/cdc_primitives.sv:38$45 in module cdc_event.
+Marked 1 switch rules as full_case in process $proc$rtl/cdc_primitives.sv:18$39 in module cdc_reset.
+Marked 1 switch rules as full_case in process $proc$rtl/cdc_primitives.sv:8$37 in module cdc_level.
+Removed 1 dead cases from process $proc$rtl/power_manager_retention.sv:117$150 in module power_manager_retention.
+Marked 2 switch rules as full_case in process $proc$rtl/power_manager_retention.sv:117$150 in module power_manager_retention.
+Marked 5 switch rules as full_case in process $proc$rtl/power_manager_retention.sv:100$131 in module power_manager_retention.
+Removed 1 dead cases from process $proc$rtl/power_manager_retention.sv:68$99 in module power_manager_retention.
+Marked 29 switch rules as full_case in process $proc$rtl/power_manager_retention.sv:68$99 in module power_manager_retention.
+Marked 2 switch rules as full_case in process $proc$rtl/power_manager_retention.sv:60$95 in module power_manager_retention.
+Removed a total of 2 dead cases.
+
+6.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 8 redundant assignments.
+Promoted 8 assignments to connections.
+
+6.4. Executing PROC_INIT pass (extract init attributes).
+
+6.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `$paramod\cdc_level\RESET_VALUE=1'1.$proc$rtl/cdc_primitives.sv:8$153'.
+Found async reset \dst_rst_ni in `\cdc_event.$proc$rtl/cdc_primitives.sv:43$49'.
+Found async reset \src_rst_ni in `\cdc_event.$proc$rtl/cdc_primitives.sv:38$45'.
+Found async reset \arst_ni in `\cdc_reset.$proc$rtl/cdc_primitives.sv:18$39'.
+Found async reset \rst_ni in `\cdc_level.$proc$rtl/cdc_primitives.sv:8$37'.
+Found async reset \aon_rst_no in `\power_manager_retention.$proc$rtl/power_manager_retention.sv:100$131'.
+Found async reset \domain_rst_no in `\power_manager_retention.$proc$rtl/power_manager_retention.sv:60$95'.
+
+6.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~43 debug messages>
+
+6.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\cdc_level\RESET_VALUE=1'1.$proc$rtl/cdc_primitives.sv:8$153'.
+     1/2: $0\sync_q[0:0]
+     2/2: $0\meta_q[0:0]
+Creating decoders for process `\cdc_event.$proc$rtl/cdc_primitives.sv:43$49'.
+     1/2: $0\ack_q[0:0]
+     2/2: $0\pulse_o[0:0]
+Creating decoders for process `\cdc_event.$proc$rtl/cdc_primitives.sv:38$45'.
+     1/1: $0\request_q[0:0]
+Creating decoders for process `\cdc_reset.$proc$rtl/cdc_primitives.sv:18$39'.
+     1/1: $0\release_q[1:0]
+Creating decoders for process `\cdc_level.$proc$rtl/cdc_primitives.sv:8$37'.
+     1/2: $0\sync_q[0:0]
+     2/2: $0\meta_q[0:0]
+Creating decoders for process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:117$150'.
+     1/8: $2\clock_req_o[0:0]
+     2/8: $1\clock_req_o[0:0]
+     3/8: $1\power_enable_o[0:0]
+     4/8: $1\isolate_req[0:0]
+     5/8: $1\release_reset[0:0]
+     6/8: $1\restore_req[0:0]
+     7/8: $1\save_req[0:0]
+     8/8: $1\block_req[0:0]
+Creating decoders for process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:100$131'.
+     1/6: $0\state_q[3:0]
+     2/6: $0\saved_q[0:0]
+     3/6: $0\boot_q[0:0]
+     4/6: $0\sleep_armed_q[0:0]
+     5/6: $0\wake_pending_q[0:0]
+     6/6: $0\count_q[31:0]
+Creating decoders for process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:68$99'.
+     1/29: $29\state_d[3:0]
+     2/29: $28\state_d[3:0]
+     3/29: $27\state_d[3:0]
+     4/29: $26\state_d[3:0]
+     5/29: $25\state_d[3:0]
+     6/29: $24\state_d[3:0]
+     7/29: $23\state_d[3:0]
+     8/29: $22\state_d[3:0]
+     9/29: $21\state_d[3:0]
+    10/29: $20\state_d[3:0]
+    11/29: $19\state_d[3:0]
+    12/29: $18\state_d[3:0]
+    13/29: $17\state_d[3:0]
+    14/29: $16\state_d[3:0]
+    15/29: $15\state_d[3:0]
+    16/29: $14\state_d[3:0]
+    17/29: $13\state_d[3:0]
+    18/29: $12\state_d[3:0]
+    19/29: $11\state_d[3:0]
+    20/29: $10\state_d[3:0]
+    21/29: $9\state_d[3:0]
+    22/29: $8\state_d[3:0]
+    23/29: $7\state_d[3:0]
+    24/29: $6\state_d[3:0]
+    25/29: $5\state_d[3:0]
+    26/29: $4\state_d[3:0]
+    27/29: $3\state_d[3:0]
+    28/29: $2\state_d[3:0]
+    29/29: $1\state_d[3:0]
+Creating decoders for process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:60$95'.
+     1/1: $0\domain_ack_q[0:0]
+
+6.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\power_manager_retention.\clock_req_o' from process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:117$150'.
+No latch inferred for signal `\power_manager_retention.\power_enable_o' from process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:117$150'.
+No latch inferred for signal `\power_manager_retention.\block_req' from process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:117$150'.
+No latch inferred for signal `\power_manager_retention.\save_req' from process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:117$150'.
+No latch inferred for signal `\power_manager_retention.\restore_req' from process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:117$150'.
+No latch inferred for signal `\power_manager_retention.\release_reset' from process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:117$150'.
+No latch inferred for signal `\power_manager_retention.\isolate_req' from process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:117$150'.
+No latch inferred for signal `\power_manager_retention.\state_d' from process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:68$99'.
+
+6.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\cdc_level\RESET_VALUE=1'1.\meta_q' using process `$paramod\cdc_level\RESET_VALUE=1'1.$proc$rtl/cdc_primitives.sv:8$153'.
+  created $adff cell `$procdff$687' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\cdc_level\RESET_VALUE=1'1.\sync_q' using process `$paramod\cdc_level\RESET_VALUE=1'1.$proc$rtl/cdc_primitives.sv:8$153'.
+  created $adff cell `$procdff$688' with positive edge clock and negative level reset.
+Creating register for signal `\cdc_event.\pulse_o' using process `\cdc_event.$proc$rtl/cdc_primitives.sv:43$49'.
+  created $adff cell `$procdff$689' with positive edge clock and negative level reset.
+Creating register for signal `\cdc_event.\ack_q' using process `\cdc_event.$proc$rtl/cdc_primitives.sv:43$49'.
+  created $adff cell `$procdff$690' with positive edge clock and negative level reset.
+Creating register for signal `\cdc_event.\request_q' using process `\cdc_event.$proc$rtl/cdc_primitives.sv:38$45'.
+  created $adff cell `$procdff$691' with positive edge clock and negative level reset.
+Creating register for signal `\cdc_reset.\release_q' using process `\cdc_reset.$proc$rtl/cdc_primitives.sv:18$39'.
+  created $adff cell `$procdff$692' with positive edge clock and negative level reset.
+Creating register for signal `\cdc_level.\meta_q' using process `\cdc_level.$proc$rtl/cdc_primitives.sv:8$37'.
+  created $adff cell `$procdff$693' with positive edge clock and negative level reset.
+Creating register for signal `\cdc_level.\sync_q' using process `\cdc_level.$proc$rtl/cdc_primitives.sv:8$37'.
+  created $adff cell `$procdff$694' with positive edge clock and negative level reset.
+Creating register for signal `\power_manager_retention.\state_q' using process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:100$131'.
+  created $adff cell `$procdff$695' with positive edge clock and negative level reset.
+Creating register for signal `\power_manager_retention.\count_q' using process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:100$131'.
+  created $adff cell `$procdff$696' with positive edge clock and negative level reset.
+Creating register for signal `\power_manager_retention.\wake_pending_q' using process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:100$131'.
+  created $adff cell `$procdff$697' with positive edge clock and negative level reset.
+Creating register for signal `\power_manager_retention.\sleep_armed_q' using process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:100$131'.
+  created $adff cell `$procdff$698' with positive edge clock and negative level reset.
+Creating register for signal `\power_manager_retention.\boot_q' using process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:100$131'.
+  created $adff cell `$procdff$699' with positive edge clock and negative level reset.
+Creating register for signal `\power_manager_retention.\saved_q' using process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:100$131'.
+  created $adff cell `$procdff$700' with positive edge clock and negative level reset.
+Creating register for signal `\power_manager_retention.\domain_ack_q' using process `\power_manager_retention.$proc$rtl/power_manager_retention.sv:60$95'.
+  created $adff cell `$procdff$701' with positive edge clock and negative level reset.
+
+6.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod\cdc_level\RESET_VALUE=1'1.$proc$rtl/cdc_primitives.sv:8$153'.
+Removing empty process `cdc_event.$proc$rtl/cdc_primitives.sv:43$49'.
+Found and cleaned up 2 empty switches in `\cdc_event.$proc$rtl/cdc_primitives.sv:38$45'.
+Removing empty process `cdc_event.$proc$rtl/cdc_primitives.sv:38$45'.
+Removing empty process `cdc_reset.$proc$rtl/cdc_primitives.sv:18$39'.
+Removing empty process `cdc_level.$proc$rtl/cdc_primitives.sv:8$37'.
+Found and cleaned up 2 empty switches in `\power_manager_retention.$proc$rtl/power_manager_retention.sv:117$150'.
+Removing empty process `power_manager_retention.$proc$rtl/power_manager_retention.sv:117$150'.
+Found and cleaned up 8 empty switches in `\power_manager_retention.$proc$rtl/power_manager_retention.sv:100$131'.
+Removing empty process `power_manager_retention.$proc$rtl/power_manager_retention.sv:100$131'.
+Found and cleaned up 29 empty switches in `\power_manager_retention.$proc$rtl/power_manager_retention.sv:68$99'.
+Removing empty process `power_manager_retention.$proc$rtl/power_manager_retention.sv:68$99'.
+Found and cleaned up 2 empty switches in `\power_manager_retention.$proc$rtl/power_manager_retention.sv:60$95'.
+Removing empty process `power_manager_retention.$proc$rtl/power_manager_retention.sv:60$95'.
+Cleaned up 43 empty switches.
+
+6.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\cdc_level\RESET_VALUE=1'1.
+Optimizing module cdc_event.
+Optimizing module cdc_reset.
+Optimizing module cdc_level.
+Optimizing module power_manager_retention.
+<suppressed ~21 debug messages>
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\cdc_level\RESET_VALUE=1'1...
+Checking module cdc_event...
+Checking module cdc_reset...
+Checking module cdc_level...
+Checking module power_manager_retention...
+Found and reported 0 problems.
+
+8. Executing SYNTH pass.
+
+8.1. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1.1. Analyzing design hierarchy..
+Top module:  \power_manager_retention
+Used module:     \cdc_level
+Used module:     $paramod\cdc_level\RESET_VALUE=1'1
+Used module:     \cdc_event
+Used module:     \cdc_reset
+
+8.1.2. Analyzing design hierarchy..
+Top module:  \power_manager_retention
+Used module:     \cdc_level
+Used module:     $paramod\cdc_level\RESET_VALUE=1'1
+Used module:     \cdc_event
+Used module:     \cdc_reset
+Removed 0 unused modules.
+
+8.2. Executing PROC pass (convert processes to netlists).
+
+8.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+8.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+8.2.4. Executing PROC_INIT pass (extract init attributes).
+
+8.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+8.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+8.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+8.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+8.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+8.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+8.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\cdc_level\RESET_VALUE=1'1.
+Optimizing module cdc_event.
+Optimizing module cdc_reset.
+Optimizing module cdc_level.
+Optimizing module power_manager_retention.
+
+8.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\cdc_level\RESET_VALUE=1'1.
+Deleting now unused module cdc_event.
+Deleting now unused module cdc_reset.
+Deleting now unused module cdc_level.
+<suppressed ~16 debug messages>
+
+8.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+Removed 26 unused cells and 180 unused wires.
+<suppressed ~27 debug messages>
+
+8.6. Executing CHECK pass (checking for obvious problems).
+Checking module power_manager_retention...
+Found and reported 0 problems.
+
+8.7. Executing OPT pass (performing simple optimizations).
+
+8.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+<suppressed ~531 debug messages>
+Removed a total of 177 cells.
+
+8.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_retention..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$171.
+    dead port 2/2 on $mux $procmux$291.
+    dead port 2/2 on $mux $procmux$293.
+    dead port 2/2 on $mux $procmux$299.
+    dead port 2/2 on $mux $procmux$307.
+    dead port 2/2 on $mux $procmux$309.
+    dead port 2/2 on $mux $procmux$316.
+    dead port 2/2 on $mux $procmux$326.
+    dead port 2/2 on $mux $procmux$328.
+    dead port 2/2 on $mux $procmux$337.
+    dead port 1/2 on $mux $procmux$348.
+    dead port 2/2 on $mux $procmux$350.
+    dead port 2/2 on $mux $procmux$360.
+    dead port 1/2 on $mux $procmux$372.
+    dead port 2/2 on $mux $procmux$374.
+    dead port 2/2 on $mux $procmux$385.
+    dead port 2/2 on $mux $procmux$397.
+    dead port 1/2 on $mux $procmux$411.
+    dead port 2/2 on $mux $procmux$413.
+    dead port 2/2 on $mux $procmux$426.
+    dead port 2/2 on $mux $procmux$441.
+    dead port 2/2 on $mux $procmux$443.
+    dead port 2/2 on $mux $procmux$457.
+    dead port 1/2 on $mux $procmux$473.
+    dead port 2/2 on $mux $procmux$475.
+    dead port 2/2 on $mux $procmux$490.
+    dead port 1/2 on $mux $procmux$507.
+    dead port 2/2 on $mux $procmux$509.
+    dead port 2/2 on $mux $procmux$525.
+    dead port 1/2 on $mux $procmux$543.
+    dead port 2/2 on $mux $procmux$545.
+    dead port 2/2 on $mux $procmux$562.
+    dead port 1/2 on $mux $procmux$581.
+    dead port 2/2 on $mux $procmux$583.
+    dead port 2/2 on $mux $procmux$601.
+    dead port 2/2 on $mux $procmux$620.
+    dead port 1/2 on $mux $procmux$641.
+    dead port 2/2 on $mux $procmux$643.
+    dead port 2/2 on $mux $procmux$663.
+Removed 39 multiplexer ports.
+<suppressed ~15 debug messages>
+
+8.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_retention.
+    New ctrl vector for $pmux cell $procmux$245: { $procmux$202_CTRL $auto$opt_reduce.cc:134:opt_pmux$703 }
+    New ctrl vector for $pmux cell $procmux$173: { $auto$opt_reduce.cc:134:opt_pmux$707 $procmux$206_CTRL $auto$opt_reduce.cc:134:opt_pmux$705 }
+    New ctrl vector for $pmux cell $procmux$221: { $procmux$180_CMP $auto$opt_reduce.cc:134:opt_pmux$709 }
+    New ctrl vector for $pmux cell $procmux$209: { $auto$opt_reduce.cc:134:opt_pmux$713 $auto$opt_reduce.cc:134:opt_pmux$711 }
+    New ctrl vector for $pmux cell $procmux$185: { $procmux$208_CTRL $auto$opt_reduce.cc:134:opt_pmux$715 }
+    New ctrl vector for $pmux cell $procmux$233: { $eq$rtl/power_manager_retention.sv:113$148_Y $auto$opt_reduce.cc:134:opt_pmux$717 }
+    New ctrl vector for $pmux cell $procmux$197: { $auto$opt_reduce.cc:134:opt_pmux$721 $auto$opt_reduce.cc:134:opt_pmux$719 }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$702: { $eq$rtl/power_manager_retention.sv:124$151_Y $eq$rtl/power_manager_retention.sv:113$148_Y $eq$rtl/power_manager_retention.sv:106$136_Y $procmux$172_CMP [0] $procmux$174_CMP $procmux$175_CMP $procmux$177_CMP $procmux$179_CMP $procmux$180_CMP $procmux$181_CMP $procmux$183_CMP [0] $procmux$184_CMP [2] $procmux$184_CMP [0] \fault_o }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$704: { $eq$rtl/power_manager_retention.sv:113$148_Y $eq$rtl/power_manager_retention.sv:106$134_Y $procmux$174_CMP $procmux$175_CMP $procmux$177_CMP $procmux$178_CMP [0] $procmux$179_CMP $procmux$180_CMP $procmux$181_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$706: { $eq$rtl/power_manager_retention.sv:106$136_Y $procmux$183_CMP [0] $procmux$184_CMP [2] $procmux$184_CMP [0] \fault_o }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$708: { $eq$rtl/power_manager_retention.sv:124$151_Y $eq$rtl/power_manager_retention.sv:113$148_Y $eq$rtl/power_manager_retention.sv:106$136_Y $eq$rtl/power_manager_retention.sv:106$134_Y $procmux$172_CMP [0] $procmux$174_CMP $procmux$175_CMP $procmux$177_CMP $procmux$178_CMP [0] $procmux$179_CMP $procmux$181_CMP $procmux$183_CMP [0] $procmux$184_CMP [2] $procmux$184_CMP [0] \fault_o }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$710: { $eq$rtl/power_manager_retention.sv:113$148_Y $eq$rtl/power_manager_retention.sv:106$134_Y $procmux$174_CMP $procmux$175_CMP $procmux$177_CMP $procmux$178_CMP [0] $procmux$179_CMP $procmux$180_CMP $procmux$181_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$712: { $eq$rtl/power_manager_retention.sv:124$151_Y $eq$rtl/power_manager_retention.sv:106$136_Y $procmux$172_CMP [0] $procmux$183_CMP [0] $procmux$184_CMP [2] $procmux$184_CMP [0] \fault_o }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$714: { $eq$rtl/power_manager_retention.sv:124$151_Y $eq$rtl/power_manager_retention.sv:113$148_Y $eq$rtl/power_manager_retention.sv:106$134_Y $procmux$172_CMP [0] $procmux$174_CMP $procmux$175_CMP $procmux$177_CMP $procmux$178_CMP [0] $procmux$179_CMP $procmux$180_CMP $procmux$181_CMP $procmux$183_CMP [0] \fault_o }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$716: { $eq$rtl/power_manager_retention.sv:124$151_Y $eq$rtl/power_manager_retention.sv:106$136_Y $eq$rtl/power_manager_retention.sv:106$134_Y $procmux$172_CMP [0] $procmux$174_CMP $procmux$175_CMP $procmux$177_CMP $procmux$178_CMP [0] $procmux$179_CMP $procmux$180_CMP $procmux$181_CMP $procmux$183_CMP [0] $procmux$184_CMP [2] $procmux$184_CMP [0] \fault_o }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$718: { $eq$rtl/power_manager_retention.sv:124$151_Y $eq$rtl/power_manager_retention.sv:106$136_Y $procmux$172_CMP [0] $procmux$174_CMP $procmux$179_CMP $procmux$180_CMP $procmux$181_CMP $procmux$183_CMP [0] $procmux$184_CMP [2] $procmux$184_CMP [0] \fault_o }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$720: { $eq$rtl/power_manager_retention.sv:113$148_Y $eq$rtl/power_manager_retention.sv:106$134_Y $procmux$175_CMP $procmux$177_CMP $procmux$178_CMP [0] }
+  Optimizing cells in module \power_manager_retention.
+Performed a total of 17 changes.
+
+8.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+<suppressed ~36 debug messages>
+Removed a total of 12 cells.
+
+8.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+Removed 1 unused cells and 194 unused wires.
+<suppressed ~2 debug messages>
+
+8.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_retention..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+8.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_retention.
+Performed a total of 0 changes.
+
+8.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+Removed a total of 0 cells.
+
+8.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+
+8.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.7.16. Finished OPT passes. (There is nothing left to do.)
+
+8.8. Executing FSM pass (extract and optimize FSM).
+
+8.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking power_manager_retention.state_q as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+
+8.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+8.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+8.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+
+8.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+8.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+8.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+8.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+8.9. Executing OPT pass (performing simple optimizations).
+
+8.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+Removed a total of 0 cells.
+
+8.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_retention..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+8.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_retention.
+Performed a total of 0 changes.
+
+8.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+Removed a total of 0 cells.
+
+8.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$701 ($adff) from module power_manager_retention (D = $0\domain_ack_q[0:0], Q = \domain_ack_q).
+Adding EN signal on $procdff$700 ($adff) from module power_manager_retention (D = 1'1, Q = \saved_q).
+Adding EN signal on $procdff$699 ($adff) from module power_manager_retention (D = 1'0, Q = \boot_q).
+Adding EN signal on $procdff$698 ($adff) from module power_manager_retention (D = $0\sleep_armed_q[0:0], Q = \sleep_armed_q).
+Adding EN signal on $procdff$697 ($adff) from module power_manager_retention (D = $0\wake_pending_q[0:0], Q = \wake_pending_q).
+Adding EN signal on $procdff$696 ($adff) from module power_manager_retention (D = $0\count_q[31:0], Q = \count_q).
+Adding EN signal on $flatten\wake_bridge.$procdff$691 ($adff) from module power_manager_retention (D = $flatten\wake_bridge.$0\request_q[0:0], Q = \wake_bridge.request_q).
+
+8.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+8.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+<suppressed ~2 debug messages>
+
+8.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_retention..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+8.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_retention.
+Performed a total of 0 changes.
+
+8.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+Removed a total of 0 cells.
+
+8.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+
+8.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.9.16. Finished OPT passes. (There is nothing left to do.)
+
+8.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 4) from port B of cell power_manager_retention.$procmux$183_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell power_manager_retention.$procmux$181_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell power_manager_retention.$procmux$180_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell power_manager_retention.$procmux$179_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell power_manager_retention.$procmux$178_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell power_manager_retention.$procmux$172_CMP0 ($eq).
+Removed top 25 bits (of 32) from port B of cell power_manager_retention.$eq$rtl/power_manager_retention.sv:30$84 ($eq).
+Removed top 29 bits (of 32) from port B of cell power_manager_retention.$ge$rtl/power_manager_retention.sv:73$100 ($ge).
+Removed top 2 bits (of 4) from mux cell power_manager_retention.$ternary$rtl/power_manager_retention.sv:79$111 ($mux).
+Removed top 1 bits (of 2) from port B of cell power_manager_retention.$auto$opt_dff.cc:195:make_patterns_logic$729 ($ne).
+Removed top 1 bits (of 2) from port B of cell power_manager_retention.$auto$opt_dff.cc:195:make_patterns_logic$735 ($ne).
+Removed top 2 bits (of 4) from port B of cell power_manager_retention.$ge$rtl/power_manager_retention.sv:96$121 ($ge).
+Removed top 1 bits (of 4) from port B of cell power_manager_retention.$ge$rtl/power_manager_retention.sv:97$126 ($ge).
+Removed top 3 bits (of 4) from port B of cell power_manager_retention.$eq$rtl/power_manager_retention.sv:106$136 ($eq).
+Removed top 30 bits (of 32) from port B of cell power_manager_retention.$add$rtl/power_manager_retention.sv:107$139 ($add).
+Removed top 2 bits (of 4) from port B of cell power_manager_retention.$eq$rtl/power_manager_retention.sv:108$141 ($eq).
+Removed top 2 bits (of 4) from wire power_manager_retention.$ternary$rtl/power_manager_retention.sv:79$111_Y.
+
+8.11. Executing PEEPOPT pass (run peephole optimizers).
+
+8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+8.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module power_manager_retention:
+  creating $macc model for $add$rtl/power_manager_retention.sv:107$139 ($add).
+  creating $alu model for $macc $add$rtl/power_manager_retention.sv:107$139.
+  creating $alu model for $ge$rtl/power_manager_retention.sv:73$100 ($ge): new $alu
+  creating $alu model for $ge$rtl/power_manager_retention.sv:96$121 ($ge): new $alu
+  creating $alu model for $ge$rtl/power_manager_retention.sv:97$126 ($ge): new $alu
+  creating $alu model for $le$rtl/power_manager_retention.sv:96$122 ($le): new $alu
+  creating $alu model for $le$rtl/power_manager_retention.sv:97$127 ($le): new $alu
+  creating $alu model for $eq$rtl/power_manager_retention.sv:124$151 ($eq): merged with $le$rtl/power_manager_retention.sv:96$122.
+  creating $alu model for $procmux$172_CMP0 ($eq): merged with $ge$rtl/power_manager_retention.sv:96$121.
+  creating $alu model for $procmux$174_CMP0 ($eq): merged with $le$rtl/power_manager_retention.sv:97$127.
+  creating $alu model for $procmux$181_CMP0 ($eq): merged with $ge$rtl/power_manager_retention.sv:97$126.
+  creating $alu cell for $le$rtl/power_manager_retention.sv:97$127, $procmux$174_CMP0: $auto$alumacc.cc:485:replace_alu$745
+  creating $alu cell for $le$rtl/power_manager_retention.sv:96$122, $eq$rtl/power_manager_retention.sv:124$151: $auto$alumacc.cc:485:replace_alu$754
+  creating $alu cell for $ge$rtl/power_manager_retention.sv:97$126, $procmux$181_CMP0: $auto$alumacc.cc:485:replace_alu$763
+  creating $alu cell for $ge$rtl/power_manager_retention.sv:96$121, $procmux$172_CMP0: $auto$alumacc.cc:485:replace_alu$772
+  creating $alu cell for $ge$rtl/power_manager_retention.sv:73$100: $auto$alumacc.cc:485:replace_alu$781
+  creating $alu cell for $add$rtl/power_manager_retention.sv:107$139: $auto$alumacc.cc:485:replace_alu$792
+  created 6 $alu and 0 $macc cells.
+
+8.14. Executing SHARE pass (SAT-based resource sharing).
+
+8.15. Executing OPT pass (performing simple optimizations).
+
+8.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+Removed a total of 0 cells.
+
+8.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_retention..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+8.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_retention.
+Performed a total of 0 changes.
+
+8.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+Removed a total of 0 cells.
+
+8.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+Removed 0 unused cells and 9 unused wires.
+<suppressed ~1 debug messages>
+
+8.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_retention..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+8.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_retention.
+Performed a total of 0 changes.
+
+8.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+Removed a total of 0 cells.
+
+8.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+
+8.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.15.16. Finished OPT passes. (There is nothing left to do.)
+
+8.16. Executing MEMORY pass.
+
+8.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+8.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+8.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+
+8.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+
+8.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+
+8.18. Executing OPT pass (performing simple optimizations).
+
+8.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+<suppressed ~21 debug messages>
+
+8.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+8.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+Removed 7 unused cells and 21 unused wires.
+<suppressed ~8 debug messages>
+
+8.18.5. Finished fast OPT passes.
+
+8.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+8.20. Executing OPT pass (performing simple optimizations).
+
+8.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+<suppressed ~3 debug messages>
+
+8.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+Removed a total of 0 cells.
+
+8.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_retention..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+8.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_retention.
+    Consolidated identical input bits for $mux cell $ternary$rtl/power_manager_retention.sv:79$111:
+      Old ports: A=2'11, B=2'01, Y=$auto$wreduce.cc:461:run$739 [1:0]
+      New ports: A=1'1, B=1'0, Y=$auto$wreduce.cc:461:run$739 [1]
+      New connections: $auto$wreduce.cc:461:run$739 [0] = 1'1
+  Optimizing cells in module \power_manager_retention.
+Performed a total of 1 changes.
+
+8.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+Removed a total of 0 cells.
+
+8.20.6. Executing OPT_SHARE pass.
+
+8.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+
+8.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+<suppressed ~1 debug messages>
+
+8.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \power_manager_retention..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+8.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \power_manager_retention.
+Performed a total of 0 changes.
+
+8.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+Removed a total of 0 cells.
+
+8.20.14. Executing OPT_SHARE pass.
+
+8.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+
+8.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.20.18. Finished OPT passes. (There is nothing left to do.)
+
+8.21. Executing TECHMAP pass (map to technology primitives).
+
+8.21.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+8.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$d1615bf4e5e328245ffd1550e5fe105901cda77b\_90_alu for cells of type $alu.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using template $paramod$740b056ede97228d3eae64ea2fdc81f0a33e0fe7\_90_alu for cells of type $alu.
+Using template $paramod$ea1a2c42d25695392cd8ecab35daf131163c81ce\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using template $paramod$6412f7f13655de512a17af2c71a87b50b4a57324\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using template $paramod$7e708ae28ab761f11d0fb59d3ffc72f6a4baf5d9\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $ne.
+Using template $paramod$1a3a0c35c4a4896fbfd612699525c057298e72d2\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $adffe.
+Using template $paramod$5d37c9676d77ab033e85de89a3261885cba80ce3\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000011110 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+<suppressed ~1231 debug messages>
+
+8.22. Executing OPT pass (performing simple optimizations).
+
+8.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+<suppressed ~526 debug messages>
+
+8.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+<suppressed ~426 debug messages>
+Removed a total of 142 cells.
+
+8.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+Removed 66 unused cells and 520 unused wires.
+<suppressed ~68 debug messages>
+
+8.22.5. Finished fast OPT passes.
+
+8.23. Executing ABC pass (technology mapping using ABC).
+
+8.23.1. Extracting gate netlist of module `\power_manager_retention' to `<abc-temp-dir>/input.blif'..
+Extracted 595 gates and 657 wires to a netlist network with 60 inputs and 60 outputs.
+
+8.23.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+8.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:        5
+ABC RESULTS:               AND cells:       11
+ABC RESULTS:              XNOR cells:       13
+ABC RESULTS:              NAND cells:       34
+ABC RESULTS:               XOR cells:       23
+ABC RESULTS:             ORNOT cells:       10
+ABC RESULTS:            ANDNOT cells:      164
+ABC RESULTS:                OR cells:      210
+ABC RESULTS:               NOR cells:       18
+ABC RESULTS:               NOT cells:       16
+ABC RESULTS:        internal signals:      537
+ABC RESULTS:           input signals:       60
+ABC RESULTS:          output signals:       60
+Removing temp directory.
+
+8.24. Executing OPT pass (performing simple optimizations).
+
+8.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module power_manager_retention.
+
+8.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\power_manager_retention'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+8.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \power_manager_retention..
+Removed 0 unused cells and 304 unused wires.
+<suppressed ~4 debug messages>
+
+8.24.5. Finished fast OPT passes.
+
+8.25. Executing HIERARCHY pass (managing design hierarchy).
+
+8.25.1. Analyzing design hierarchy..
+Top module:  \power_manager_retention
+
+8.25.2. Analyzing design hierarchy..
+Top module:  \power_manager_retention
+Removed 0 unused modules.
+
+8.26. Printing statistics.
+
+=== power_manager_retention ===
+
+   Number of wires:                596
+   Number of wire bits:            670
+   Number of public wires:         141
+   Number of public wire bits:     184
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                577
+     $_ANDNOT_                     164
+     $_AND_                         11
+     $_DFFE_PN0P_                   36
+     $_DFFE_PN1P_                    2
+     $_DFF_PN0_                     34
+     $_DFF_PN1_                      2
+     $_MUX_                          5
+     $_NAND_                        34
+     $_NOR_                         17
+     $_NOT_                         16
+     $_ORNOT_                       10
+     $_OR_                         210
+     $_XNOR_                        13
+     $_XOR_                         23
+
+8.27. Executing CHECK pass (checking for obvious problems).
+Checking module power_manager_retention...
+Found and reported 0 problems.
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module power_manager_retention...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a060)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\power_manager_retention": {
+         "num_wires":         596,
+         "num_wire_bits":     670,
+         "num_pub_wires":     141,
+         "num_pub_wire_bits": 184,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         577,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 164,
+            "$_AND_": 11,
+            "$_DFFE_PN0P_": 36,
+            "$_DFFE_PN1P_": 2,
+            "$_DFF_PN0_": 34,
+            "$_DFF_PN1_": 2,
+            "$_MUX_": 5,
+            "$_NAND_": 34,
+            "$_NOR_": 17,
+            "$_NOT_": 16,
+            "$_ORNOT_": 10,
+            "$_OR_": 210,
+            "$_XNOR_": 13,
+            "$_XOR_": 23
+         }
+      }
+   },
+      "design": {
+         "num_wires":         596,
+         "num_wire_bits":     670,
+         "num_pub_wires":     141,
+         "num_pub_wire_bits": 184,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         577,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 164,
+            "$_AND_": 11,
+            "$_DFFE_PN0P_": 36,
+            "$_DFFE_PN1P_": 2,
+            "$_DFF_PN0_": 34,
+            "$_DFF_PN1_": 2,
+            "$_MUX_": 5,
+            "$_NAND_": 34,
+            "$_NOR_": 17,
+            "$_NOT_": 16,
+            "$_ORNOT_": 10,
+            "$_OR_": 210,
+            "$_XNOR_": 13,
+            "$_XOR_": 23
+         }
+      }
+}
+
+10. Executing JSON backend.
+
+11. Executing Verilog backend.
+
+11.1. Executing BMUXMAP pass.
+
+11.2. Executing DEMUXMAP pass.
+Dumping module `\power_manager_retention'.
