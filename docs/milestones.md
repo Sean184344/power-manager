@@ -73,7 +73,7 @@ with zero inferred latches. No physical area, timing or power result is claimed.
 - [x] Add annotated normal-wake and start-timeout waveforms, captured VCD, source hashes and reproducible SVG renderer: `docs/waveforms.md`, `reports/m6/`.
 - [x] Add requirement-to-evidence verification matrix: `docs/verification-matrix.md`.
 - [x] Review state sequencing, documented limitations and README; review scope recorded in `docs/portfolio.md`.
-- [ ] Record the owner's license choice; no LICENSE file has been added.
+- [x] Record the owner's explicit MIT license choice; add root `LICENSE` with copyright credited to Sean184344 (2026).
 - [x] Publish the tested M5 source/results to GitHub as requested: `d136475800f6b3f1c1e3f6cf4831973db5143e26` on `main`.
 - [x] Add CI workflow for simulation, formal, synthesis, waveform reproduction and evidence retention; local YAML/configuration checks pass.
 - [x] Publish reviewed M6 additions (`dfb7fbc`) and confirm the first hosted CI run passes: [run 40442477414](https://github.com/Sean184344/power-manager/actions/runs/40442477414).
@@ -86,5 +86,7 @@ waveform reproduction and artifact upload. Evidence: `reports/m6/ci.json` and
 `reports/m6/ci-summary.log`. Hosted tools were Icarus 12.0 and Yosys 0.33;
 generic cell counts remained 116 / 186 / 577 with zero latches.
 
-M6 remains open only for the owner's license choice. No LICENSE file has been
-added. Stop here for milestone review; no later milestone has been started.
+- [x] Add a PC demonstration guide, synthesis flow diagram and generated core gate schematic; `make schematic` passes with Graphviz.
+
+M6 is complete within its documented scope. The owner's final license decision
+is implemented. Stop here for milestone review; no later milestone has been started.

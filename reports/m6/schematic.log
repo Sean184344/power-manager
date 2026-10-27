@@ -1,0 +1,15 @@
+python3 scripts/run_synthesis.py
+PASS: synthesis power_manager: 116 generic cells, zero latches, structural checks passed
+PASS: synthesis power_manager_cdc: 186 generic cells, zero latches, structural checks passed
+PASS: synthesis power_manager_retention: 577 generic cells, zero latches, structural checks passed
+yosys -Q -T -p 'read_json build/synthesis/power_manager.netlist.json; show -format svg -viewer none -prefix build/synthesis/power_manager-schematic power_manager'
+
+-- Running command `read_json build/synthesis/power_manager.netlist.json; show -format svg -viewer none -prefix build/synthesis/power_manager-schematic power_manager' --
+
+1. Executing JSON frontend.
+Importing module power_manager from JSON tree.
+
+2. Generating Graphviz representation of design.
+Writing dot description to `build/synthesis/power_manager-schematic.dot'.
+Dumping module power_manager to page 1.
+Exec: dot -Tsvg 'build/synthesis/power_manager-schematic.dot' > 'build/synthesis/power_manager-schematic.svg.new' && mv 'build/synthesis/power_manager-schematic.svg.new' 'build/synthesis/power_manager-schematic.svg'

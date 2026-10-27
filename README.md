@@ -57,6 +57,8 @@ proof scope, cell counts and constraint limitations. Archived evidence is in
 
 Start with the [architecture and FSM diagrams](docs/architecture.md),
 [annotated waveforms](docs/waveforms.md), and [verification matrix](docs/verification-matrix.md).
+The [demo guide](docs/demo.md) explains running the tools on your PC, opening
+waveforms in GTKWave, and generating a Yosys gate schematic with `make schematic`.
 For implementation details, read `docs/specification.md`, `rtl/power_manager.sv`,
 then `tb/tb_power_manager.sv`. The [milestone checklist](docs/milestones.md) records
 completion and remaining review items.
@@ -74,4 +76,4 @@ The tested M5 snapshot is published at
 M6 adds portfolio documentation and an automated regression workflow.
 See the milestone checklist for the latest hosted CI status.
 See [portfolio notes](docs/portfolio.md) for measured resume claims, release review
-and CI scope. No license has been selected; the owner's license decision remains pending.
+and CI scope. This project is licensed under the [MIT License](LICENSE).

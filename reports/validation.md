@@ -387,3 +387,28 @@ cover witnesses; synthesis produced 116 / 186 / 577 generic cells with zero latc
 job log. The Actions run contains complete logs and its verification artifact.
 The checklist now marks publication and hosted CI verified. The owner's license
 choice is the sole remaining M6 item; no license was selected automatically.
+
+## M6 completion — MIT license and demonstration guide
+
+The owner explicitly selected MIT. Added the standard MIT text in `LICENSE`,
+with copyright credited to the repository owner, Sean184344 (2026), and updated
+README, portfolio notes and the milestone checklist. The canonical license text
+was checked against https://opensource.org/license/mit.
+
+Added `docs/demo.md` with Ubuntu/WSL setup, GTKWave signal selection and scenario
+windows, a Mermaid synthesis-flow diagram and instructions for showing netlists
+and cell statistics. Added the optional `make schematic` target, which synthesizes
+all three tops and draws the core's generated JSON netlist using Yosys `show` and
+Graphviz. CI now installs Graphviz and runs this target, retaining its output in
+the existing verification artifact.
+
+Local `make schematic` exited 0. All three synthesis checks passed with unchanged
+116 / 186 / 577 generic-cell counts and zero latches. The actual generated core
+schematic is archived as `docs/images/power_manager-synth.svg`; command output and
+source/artifact hashes are in `reports/m6/schematic.log` and `schematic.json`.
+SVG XML parsing, workflow YAML checks and Markdown file-link checks passed.
+The installed GTKWave executable was found; no interactive GUI session was tested.
+These additions do not change controller RTL or the proof assumptions.
+
+M6's remaining license decision is resolved and the milestone is complete.
+No physical implementation or later milestone has been started.

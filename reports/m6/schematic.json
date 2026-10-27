@@ -1,0 +1,12 @@
+{
+  "command": "make schematic",
+  "tool": "Yosys 0.33",
+  "mapping": "generic gates; no Liberty or physical layout",
+  "top": "power_manager",
+  "cells": 116,
+  "source_and_artifact_sha256": {
+    "rtl/power_manager.sv": "ec469c554ba45835a33289788a0c04b412bddbf12835692eb107d0481951d817",
+    "scripts/run_synthesis.py": "366c4da81764c06433a169f7c8fa9957cd9de7f4537f7a81dd148b4de4fe0b87",
+    "docs/images/power_manager-synth.svg": "2d3e4dfdad6589e7ab02451ddef08357ef17e4730b2a84ef1a4ca918500efa74"
+  }
+}

@@ -31,9 +31,8 @@ usable Git metadata; the M5 publication used the GitHub API.
 
 ## License status
 
-No license has been selected and no LICENSE file has been added. The repository
-owner's license choice remains an explicit M6 checklist item. Public availability
-should not be described as a grant of an open-source license.
+The owner selected the [MIT License](../LICENSE), with copyright credited to
+Sean184344 (2026). The license text is included at the repository root.
 
 ## CI
 
@@ -51,4 +50,6 @@ The first hosted run passed on M6 commit `dfb7fbc`:
 [run 40442477414](https://github.com/Sean184344/power-manager/actions/runs/40442477414).
 Tool versions, commit identity and the result are recorded in
 [`reports/m6/ci.json`](../reports/m6/ci.json). All verification, diagram reproduction
-and evidence upload steps succeeded. The license decision remains pending.
+and evidence upload steps succeeded. The owner has since selected MIT, completing
+the remaining M6 decision. The [demo guide](demo.md) adds PC setup instructions,
+waveform presentation steps, the synthesis flow and the generated core schematic.

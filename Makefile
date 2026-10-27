@@ -4,7 +4,7 @@ PYTHON ?= python3
 YOSYS ?= yosys
 .DEFAULT_GOAL := test
 export IVERILOG VVP YOSYS
-.PHONY: test m2 m3 m4 mutations formal synthesis m5 check clean
+.PHONY: test m2 m3 m4 mutations formal synthesis schematic m5 check clean
 
 check: test m5
 
@@ -15,6 +15,10 @@ formal:
 
 synthesis:
 	$(PYTHON) scripts/run_synthesis.py
+
+# Optional presentation output; requires Graphviz (dot) in addition to Yosys.
+schematic: synthesis
+	$(YOSYS) -Q -T -p 'read_json build/synthesis/power_manager.netlist.json; show -format svg -viewer none -prefix build/synthesis/power_manager-schematic power_manager'
 
 test: build/tb.vvp build/workload.vvp
 	$(VVP) build/tb.vvp
