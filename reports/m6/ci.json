@@ -1,0 +1,20 @@
+{
+  "run_id": 40442477414,
+  "commit": "dfb7fbcc5d1d2cc8a9471abb9f2bc27585df2914",
+  "url": "https://github.com/Sean184344/power-manager/actions/runs/40442477414",
+  "status": "completed",
+  "conclusion": "success",
+  "job_id": 121985806699,
+  "tools": {
+    "iverilog": "12.0",
+    "yosys": "0.33 (2584903a060)",
+    "python": "3.12.3",
+    "make": "4.3"
+  },
+  "checks": [
+    "make check",
+    "waveform reproduction and byte comparison",
+    "artifact upload"
+  ],
+  "summary_log": "ci-summary.log"
+}

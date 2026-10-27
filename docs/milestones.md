@@ -76,15 +76,15 @@ with zero inferred latches. No physical area, timing or power result is claimed.
 - [ ] Record the owner's license choice; no LICENSE file has been added.
 - [x] Publish the tested M5 source/results to GitHub as requested: `d136475800f6b3f1c1e3f6cf4831973db5143e26` on `main`.
 - [x] Add CI workflow for simulation, formal, synthesis, waveform reproduction and evidence retention; local YAML/configuration checks pass.
-- [ ] Publish reviewed M6 additions and confirm the first hosted CI run passes.
+- [x] Publish reviewed M6 additions (`dfb7fbc`) and confirm the first hosted CI run passes: [run 40442477414](https://github.com/Sean184344/power-manager/actions/runs/40442477414).
 - [x] Write resume bullets based only on measured results: `docs/portfolio.md`.
 - [x] Run simulation after documentation/rendering changes and clean full verification after CI setup; `make test` and `make check` exit 0. Logs: `reports/m6/test.log`, `reports/m6/check.log`.
 
-Current session (2026-10-27): M6 artifacts passed local review; publication is authorized. Fresh SVGs
-match the archived illustrations; capture hashes and Markdown file links pass.
-The RTL and formal harness match the archived M5 source hashes. Workflow YAML
-parses and its local settings were checked, but no hosted CI run is claimed.
+Current session (2026-10-27): M6 is published. The first hosted CI run passed
+simulation, eight formal proofs, 52 cover witnesses, synthesis of three tops,
+waveform reproduction and artifact upload. Evidence: `reports/m6/ci.json` and
+`reports/m6/ci-summary.log`. Hosted tools were Icarus 12.0 and Yosys 0.33;
+generic cell counts remained 116 / 186 / 577 with zero latches.
 
-M6 is not marked complete: the owner's license decision and publication/hosted
-CI verification remain pending. Publish M6 and inspect the hosted regression,
-then stop for milestone review. The M5 snapshot is already public.
+M6 remains open only for the owner's license choice. No LICENSE file has been
+added. Stop here for milestone review; no later milestone has been started.

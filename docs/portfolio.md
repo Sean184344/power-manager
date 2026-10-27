@@ -37,7 +37,7 @@ should not be described as a grant of an open-source license.
 
 ## CI
 
-The proposed workflow installs Icarus Verilog and Yosys on Ubuntu 24.04, records
+The published workflow installs Icarus Verilog and Yosys on Ubuntu 24.04, records
 tool versions, and runs `make check` from a clean checkout. It retains build logs,
 coverage, waveforms and generated formal/synthesis artifacts even on failure.
 Its package versions may differ from the archived local Icarus 12.0 / Yosys 0.33
@@ -46,3 +46,9 @@ The workflow uses the documented [checkout v4](https://github.com/actions/checko
 and [artifact upload v4](https://github.com/actions/upload-artifact/blob/v4/README.md)
 interfaces. It also reproduces the annotated diagrams and compares them with
 the reviewed SVGs.
+
+The first hosted run passed on M6 commit `dfb7fbc`:
+[run 40442477414](https://github.com/Sean184344/power-manager/actions/runs/40442477414).
+Tool versions, commit identity and the result are recorded in
+[`reports/m6/ci.json`](../reports/m6/ci.json). All verification, diagram reproduction
+and evidence upload steps succeeded. The license decision remains pending.

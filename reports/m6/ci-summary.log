@@ -1,0 +1,77 @@
+2026-10-27T03:08:38.9017647Z Icarus Verilog version 12.0 (stable) ()
+2026-10-27T03:08:38.9040066Z Yosys 0.33 (git sha1 2584903a060)
+2026-10-27T03:08:38.9040295Z Python 3.12.3
+2026-10-27T03:08:38.9040483Z GNU Make 4.3
+2026-10-27T03:08:38.9382305Z PASS: 16 scenarios, 73 explicit checks plus continuous safety monitors
+2026-10-27T03:08:38.9430974Z PASS: scoreboard accepted=6 completed=5 reset-canceled=1 outstanding=0
+2026-10-27T03:08:38.9431449Z PASS: workload 4 scenarios, 33 explicit checks
+2026-10-27T03:08:39.3296140Z PASS: M2 timeout=1 seed=1 checks=1021 accepted=105 completed=105
+2026-10-27T03:08:39.3297177Z PASS: M2 timeout=1 seed=17 checks=1021 accepted=105 completed=105
+2026-10-27T03:08:39.3298094Z PASS: M2 timeout=1 seed=2026 checks=1021 accepted=105 completed=105
+2026-10-27T03:08:39.3299114Z PASS: M2 timeout=2 seed=1 checks=1080 accepted=107 completed=107
+2026-10-27T03:08:39.3300160Z PASS: M2 timeout=2 seed=17 checks=1091 accepted=107 completed=107
+2026-10-27T03:08:39.3301265Z PASS: M2 timeout=2 seed=2026 checks=1088 accepted=107 completed=107
+2026-10-27T03:08:39.3301956Z PASS: M2 timeout=3 seed=1 checks=1158 accepted=107 completed=107
+2026-10-27T03:08:39.3302543Z PASS: M2 timeout=3 seed=17 checks=1152 accepted=107 completed=107
+2026-10-27T03:08:39.3303137Z PASS: M2 timeout=3 seed=2026 checks=1180 accepted=107 completed=107
+2026-10-27T03:08:39.3303775Z PASS: M2 timeout=8 seed=1 checks=1522 accepted=107 completed=107
+2026-10-27T03:08:39.3304380Z PASS: M2 timeout=8 seed=17 checks=1517 accepted=107 completed=107
+2026-10-27T03:08:39.3305177Z PASS: M2 timeout=8 seed=2026 checks=1481 accepted=107 completed=107
+2026-10-27T03:08:39.3305842Z PASS: 12 M2 runs; deterministic replay matched; build/m2/coverage.json
+2026-10-27T03:08:39.4582663Z PASS: detected lost-wake: M2: wake enters START
+2026-10-27T03:08:39.4583176Z PASS: detected early-clock-stop: scoreboard: unsafe clock shutdown with outstanding work
+2026-10-27T03:08:39.4583732Z PASS: positive control and 2/2 expected mutation failures; production RTL unchanged
+2026-10-27T03:08:40.3023970Z PASS: M3 period=10:6 phase=0 start_delay=1 checks=234 wake_events=19
+2026-10-27T03:08:40.3025035Z PASS: M3 period=10:6 phase=0 start_delay=7 checks=233 wake_events=19
+2026-10-27T03:08:40.3025468Z PASS: M3 period=10:6 phase=1 start_delay=1 checks=234 wake_events=19
+2026-10-27T03:08:40.3025863Z PASS: M3 period=10:6 phase=1 start_delay=7 checks=233 wake_events=19
+2026-10-27T03:08:40.3026358Z PASS: M3 period=10:6 phase=4 start_delay=1 checks=234 wake_events=19
+2026-10-27T03:08:40.3026740Z PASS: M3 period=10:6 phase=4 start_delay=7 checks=233 wake_events=19
+2026-10-27T03:08:40.3027273Z PASS: M3 period=10:10 phase=0 start_delay=1 checks=239 wake_events=19
+2026-10-27T03:08:40.3027731Z PASS: M3 period=10:10 phase=0 start_delay=7 checks=239 wake_events=19
+2026-10-27T03:08:40.3028123Z PASS: M3 period=10:10 phase=1 start_delay=1 checks=238 wake_events=19
+2026-10-27T03:08:40.3028520Z PASS: M3 period=10:10 phase=1 start_delay=7 checks=238 wake_events=19
+2026-10-27T03:08:40.3028909Z PASS: M3 period=10:10 phase=4 start_delay=1 checks=238 wake_events=19
+2026-10-27T03:08:40.3029298Z PASS: M3 period=10:10 phase=4 start_delay=7 checks=238 wake_events=19
+2026-10-27T03:08:40.3029696Z PASS: M3 period=10:14 phase=0 start_delay=1 checks=243 wake_events=19
+2026-10-27T03:08:40.3030083Z PASS: M3 period=10:14 phase=0 start_delay=7 checks=243 wake_events=19
+2026-10-27T03:08:40.3030472Z PASS: M3 period=10:14 phase=1 start_delay=1 checks=243 wake_events=19
+2026-10-27T03:08:40.3030862Z PASS: M3 period=10:14 phase=1 start_delay=7 checks=243 wake_events=19
+2026-10-27T03:08:40.3031250Z PASS: M3 period=10:14 phase=4 start_delay=1 checks=243 wake_events=19
+2026-10-27T03:08:40.3031655Z PASS: M3 period=10:14 phase=4 start_delay=7 checks=243 wake_events=19
+2026-10-27T03:08:40.3032050Z PASS: M3 period=10:26 phase=0 start_delay=1 checks=258 wake_events=19
+2026-10-27T03:08:40.3032438Z PASS: M3 period=10:26 phase=0 start_delay=7 checks=256 wake_events=19
+2026-10-27T03:08:40.3032820Z PASS: M3 period=10:26 phase=1 start_delay=1 checks=259 wake_events=19
+2026-10-27T03:08:40.3033236Z PASS: M3 period=10:26 phase=1 start_delay=7 checks=256 wake_events=19
+2026-10-27T03:08:40.3033631Z PASS: M3 period=10:26 phase=4 start_delay=1 checks=256 wake_events=19
+2026-10-27T03:08:40.3034020Z PASS: M3 period=10:26 phase=4 start_delay=7 checks=256 wake_events=19
+2026-10-27T03:08:40.3034415Z PASS: 24 M3 runs, 18/18 scenarios per run; build/m3/coverage.json
+2026-10-27T03:08:40.8614110Z PASS: M4 period=10:6 phase=1 delay=1 checks=145
+2026-10-27T03:08:40.8615290Z PASS: M4 period=10:6 phase=1 delay=5 checks=145
+2026-10-27T03:08:40.8615994Z PASS: M4 period=10:6 phase=4 delay=1 checks=145
+2026-10-27T03:08:40.8616475Z PASS: M4 period=10:6 phase=4 delay=5 checks=145
+2026-10-27T03:08:40.8616958Z PASS: M4 period=10:14 phase=1 delay=1 checks=145
+2026-10-27T03:08:40.8617431Z PASS: M4 period=10:14 phase=1 delay=5 checks=145
+2026-10-27T03:08:40.8617899Z PASS: M4 period=10:14 phase=4 delay=1 checks=145
+2026-10-27T03:08:40.8618364Z PASS: M4 period=10:14 phase=4 delay=5 checks=145
+2026-10-27T03:08:40.8618820Z PASS: M4 period=10:26 phase=1 delay=1 checks=145
+2026-10-27T03:08:40.8619315Z PASS: M4 period=10:26 phase=1 delay=5 checks=145
+2026-10-27T03:08:40.8619766Z PASS: M4 period=10:26 phase=4 delay=1 checks=145
+2026-10-27T03:08:40.8620236Z PASS: M4 period=10:26 phase=4 delay=5 checks=145
+2026-10-27T03:08:40.8620788Z PASS: 12 M4 runs, 15/15 scenarios per run; corrupted restore rejected
+2026-10-27T03:08:41.1976659Z PASS: formal timeout=1 safety, induction length 3
+2026-10-27T03:08:41.6444344Z PASS: formal timeout=1 progress, induction length 5
+2026-10-27T03:08:44.5188587Z PASS: formal timeout=1, 12 safety covers and a progress-environment witness
+2026-10-27T03:08:44.8307736Z PASS: formal timeout=2 safety, induction length 3
+2026-10-27T03:08:45.3670550Z PASS: formal timeout=2 progress, induction length 6
+2026-10-27T03:08:48.6309065Z PASS: formal timeout=2, 12 safety covers and a progress-environment witness
+2026-10-27T03:08:49.0458338Z PASS: formal timeout=3 safety, induction length 5
+2026-10-27T03:08:49.6809006Z PASS: formal timeout=3 progress, induction length 7
+2026-10-27T03:08:53.3572632Z PASS: formal timeout=3, 12 safety covers and a progress-environment witness
+2026-10-27T03:08:54.1406165Z PASS: formal timeout=8 safety, induction length 9
+2026-10-27T03:08:55.4920181Z PASS: formal timeout=8 progress, induction length 12
+2026-10-27T03:09:01.3252096Z PASS: formal timeout=8, 12 safety covers and a progress-environment witness
+2026-10-27T03:09:01.9016793Z PASS: 8 inductive proofs, 52 cover witnesses; lost-wake mutation detected
+2026-10-27T03:09:02.1183365Z PASS: synthesis power_manager: 116 generic cells, zero latches, structural checks passed
+2026-10-27T03:09:02.3748504Z PASS: synthesis power_manager_cdc: 186 generic cells, zero latches, structural checks passed
+2026-10-27T03:09:02.8949059Z PASS: synthesis power_manager_retention: 577 generic cells, zero latches, structural checks passed

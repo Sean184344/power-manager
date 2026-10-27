@@ -368,3 +368,22 @@ Local checks do not execute GitHub's runner, package installation or artifact
 service. The workflow has not been published or run on GitHub. M6 also leaves
 the owner's license choice pending; no LICENSE file was selected automatically.
 The checklist remains open for these items, and work stops for milestone review.
+
+## M6 publication and hosted CI — 2026-10-27
+
+Published the reviewed M6 additions on `main` at
+`dfb7fbcc5d1d2cc8a9471abb9f2bc27585df2914`. Read back the branch ref and verified
+the 16 published file blob hashes against the uploaded content.
+
+[GitHub Actions run 40442477414](https://github.com/Sean184344/power-manager/actions/runs/40442477414)
+completed successfully. Tool installation, version capture, `make check`, SVG
+reproduction/comparison and artifact upload all passed. The hosted runner used
+Icarus 12.0, Yosys 0.33, Python 3.12.3 and Make 4.3. All simulation configurations
+and negative controls passed; formal completed eight inductive proofs and 52
+cover witnesses; synthesis produced 116 / 186 / 577 generic cells with zero latches.
+
+`reports/m6/ci.json` records the tested commit and run identity;
+`reports/m6/ci-summary.log` retains tool versions and PASS lines from the hosted
+job log. The Actions run contains complete logs and its verification artifact.
+The checklist now marks publication and hosted CI verified. The owner's license
+choice is the sole remaining M6 item; no license was selected automatically.
