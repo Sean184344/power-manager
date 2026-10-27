@@ -326,3 +326,45 @@ regression because their source hashes now include the formal-only core port.
 
 M5 is complete within this explicit scope. M6 has not started. Work stops for
 milestone review; nothing has been pushed to GitHub.
+
+## M6 local review — 2026-10-27
+
+The earlier publication statements above describe their historical sessions.
+Following the user's publication request, the complete M5 snapshot was published
+to `Sean184344/power-manager` on `main` at
+`d136475800f6b3f1c1e3f6cf4831973db5143e26`. The GitHub ref was read back and matched.
+Publication used the GitHub API because this workspace has no usable Git metadata.
+
+M6 adds architecture/FSM diagrams, a verification matrix, measured resume bullets,
+and a review of scope and limitations. Two annotated SVG timing diagrams are
+rendered from the passing baseline VCD: normal sleep/wake and clock-start timeout.
+The VCD and capture/source hashes are retained in `reports/m6/`. The renderer uses
+Python's standard library and can reproduce the diagrams from a fresh regression.
+README now links the explanatory artifacts and records the published snapshot.
+Ignore rules retain curated report VCDs and exclude Windows Zone.Identifier files.
+
+Verification was incremental:
+
+1. The interrupted pre-change `make check` completed with exit 0.
+2. After documentation and waveform rendering changes, `make test` exited 0.
+   The complete output is in `reports/m6/test.log`.
+3. Added `.github/workflows/regression.yml` for Ubuntu 24.04. It installs tools,
+   records their versions, runs `make check`, reproduces the SVGs, and retains
+   build evidence even when a check fails. The workflow uses read-only repository
+   permissions and disables checkout credential persistence.
+4. After `make clean`, `make check` exited 0. The baseline passed 16 scenarios /
+   73 checks and workload integration passed 4 scenarios / 33 checks. All 12 M2,
+   24 M3 and 12 M4 configurations passed; expected simulation mutations and
+   restore corruption were detected. Eight inductive proofs and 52 cover
+   witnesses passed, including formal lost-wake detection. Synthesis again
+   produced 116 / 186 / 577 generic cells with zero latches. Complete output:
+   `reports/m6/check.log`.
+5. Workflow YAML parsing and local configuration checks passed. Both SVGs parsed
+   as XML and matched fresh simulation renders byte for byte. Capture/source
+   hashes and relative Markdown file links passed. RTL and formal harness hashes
+   match the archived M5 reports. No functional RTL changes were made for M6.
+
+Local checks do not execute GitHub's runner, package installation or artifact
+service. The workflow has not been published or run on GitHub. M6 also leaves
+the owner's license choice pending; no LICENSE file was selected automatically.
+The checklist remains open for these items, and work stops for milestone review.

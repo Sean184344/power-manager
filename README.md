@@ -55,7 +55,11 @@ See [M5 formal and synthesis](docs/m5-formal-synthesis.md) for assumptions,
 proof scope, cell counts and constraint limitations. Archived evidence is in
 `reports/m5/`; generated netlists and complete replay scripts are in `build/`.
 
-Start reading: `docs/milestones.md`, `docs/specification.md`, `rtl/power_manager.sv`, then `tb/tb_power_manager.sv`.
+Start with the [architecture and FSM diagrams](docs/architecture.md),
+[annotated waveforms](docs/waveforms.md), and [verification matrix](docs/verification-matrix.md).
+For implementation details, read `docs/specification.md`, `rtl/power_manager.sv`,
+then `tb/tb_power_manager.sv`. The [milestone checklist](docs/milestones.md) records
+completion and remaining review items.
 
 ## Why this can become a strong project
 
@@ -64,4 +68,10 @@ The final evidence should be a traceable specification, protocol-aware workload 
 The design is original educational RTL. OpenTitan's power-manager documentation is architectural background, not a claim of OpenTitan compatibility or verification:
 https://opentitan.org/book/hw/top_earlgrey/ip_autogen/pwrmgr/doc/theory_of_operation.html
 
-GitHub publication is deferred until the user is ready. No remote is configured and nothing has been pushed.
+The tested M5 snapshot is published at
+[Sean184344/power-manager](https://github.com/Sean184344/power-manager), commit
+[`d136475`](https://github.com/Sean184344/power-manager/commit/d136475800f6b3f1c1e3f6cf4831973db5143e26).
+M6 adds portfolio documentation and an automated regression workflow.
+See the milestone checklist for the latest hosted CI status.
+See [portfolio notes](docs/portfolio.md) for measured resume claims, release review
+and CI scope. No license has been selected; the owner's license decision remains pending.

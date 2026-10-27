@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 517" role="img">
+<title>Clock-start timeout (TIMEOUT_CYCLES=4; time in ns)</title>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="monospace" font-size="12" fill="#172b4d">
+<text x="16" y="24" font-size="18">Clock-start timeout (TIMEOUT_CYCLES=4; time in ns)</text>
+<path d="M130.0,55 V447" stroke="#e5e9ef"/>
+<text x="130.0" y="47" text-anchor="middle">675</text>
+<path d="M198.0,55 V447" stroke="#e5e9ef"/>
+<text x="198.0" y="47" text-anchor="middle">680</text>
+<path d="M266.0,55 V447" stroke="#e5e9ef"/>
+<text x="266.0" y="47" text-anchor="middle">685</text>
+<path d="M334.0,55 V447" stroke="#e5e9ef"/>
+<text x="334.0" y="47" text-anchor="middle">690</text>
+<path d="M402.0,55 V447" stroke="#e5e9ef"/>
+<text x="402.0" y="47" text-anchor="middle">695</text>
+<path d="M470.0,55 V447" stroke="#e5e9ef"/>
+<text x="470.0" y="47" text-anchor="middle">700</text>
+<path d="M538.0,55 V447" stroke="#e5e9ef"/>
+<text x="538.0" y="47" text-anchor="middle">705</text>
+<path d="M606.0,55 V447" stroke="#e5e9ef"/>
+<text x="606.0" y="47" text-anchor="middle">710</text>
+<path d="M674.0,55 V447" stroke="#e5e9ef"/>
+<text x="674.0" y="47" text-anchor="middle">715</text>
+<path d="M742.0,55 V447" stroke="#e5e9ef"/>
+<text x="742.0" y="47" text-anchor="middle">720</text>
+<path d="M810.0,55 V447" stroke="#e5e9ef"/>
+<text x="810.0" y="47" text-anchor="middle">725</text>
+<path d="M878.0,55 V447" stroke="#e5e9ef"/>
+<text x="878.0" y="47" text-anchor="middle">730</text>
+<path d="M946.0,55 V447" stroke="#e5e9ef"/>
+<text x="946.0" y="47" text-anchor="middle">735</text>
+<path d="M1014.0,55 V447" stroke="#e5e9ef"/>
+<text x="1014.0" y="47" text-anchor="middle">740</text>
+<path d="M1082.0,55 V447" stroke="#e5e9ef"/>
+<text x="1082.0" y="47" text-anchor="middle">745</text>
+<path d="M1150.0,55 V447" stroke="#e5e9ef"/>
+<text x="1150.0" y="47" text-anchor="middle">750</text>
+<text x="12" y="85">state</text>
+<rect x="130.0" y="68" width="136.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="198.0" y="84" text-anchor="middle">SLEEP</text>
+<rect x="266.0" y="68" width="544.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="538.0" y="84" text-anchor="middle">START</text>
+<rect x="810.0" y="68" width="340.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="980.0" y="84" text-anchor="middle">FAULT</text>
+<text x="12" y="128">sleep_req</text>
+<path d="M130.0,113 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<text x="12" y="171">wake</text>
+<path d="M130.0,176 H198.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M198.0,156 H334.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M198.0,156 V176" stroke="#146b58" stroke-width="2"/>
+<path d="M334.0,176 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M334.0,156 V176" stroke="#146b58" stroke-width="2"/>
+<text x="12" y="214">idle</text>
+<path d="M130.0,199 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<text x="12" y="257">ready</text>
+<path d="M130.0,242 H198.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M198.0,262 H878.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M198.0,242 V262" stroke="#146b58" stroke-width="2"/>
+<path d="M878.0,242 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M878.0,242 V262" stroke="#146b58" stroke-width="2"/>
+<text x="12" y="300">clk_en</text>
+<path d="M130.0,305 H266.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M266.0,285 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M266.0,285 V305" stroke="#146b58" stroke-width="2"/>
+<text x="12" y="343">isolate</text>
+<path d="M130.0,328 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<text x="12" y="386">block_work</text>
+<path d="M130.0,371 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<text x="12" y="429">fault</text>
+<path d="M130.0,434 H810.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M810.0,414 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M810.0,414 V434" stroke="#146b58" stroke-width="2"/>
+<text x="16" y="475">685 ns: wake enters START. Four wait edges: 695, 705, 715, 725 ns.</text>
+<text x="16" y="493">725 ns: sticky FAULT. Ready arriving at 730 ns cannot release work.</text>
+</g></svg>

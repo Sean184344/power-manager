@@ -1,0 +1,79 @@
+vvp build/tb.vvp
+VCD info: dumpfile build/power_manager.vcd opened for output.
+PASS: 16 scenarios, 73 explicit checks plus continuous safety monitors
+tb/tb_power_manager.sv:97: $finish called at 1286000 (1ps)
+vvp build/workload.vvp
+VCD info: dumpfile build/workload.vcd opened for output.
+PASS: scoreboard accepted=6 completed=5 reset-canceled=1 outstanding=0
+PASS: workload 4 scenarios, 33 explicit checks
+tb/tb_workload.sv:92: $finish called at 528000 (1ps)
+python3 scripts/run_m2.py
+PASS: M2 timeout=1 seed=1 checks=1021 accepted=105 completed=105
+  coverage: 17/17 required bins
+PASS: M2 timeout=1 seed=17 checks=1021 accepted=105 completed=105
+  coverage: 17/17 required bins
+PASS: M2 timeout=1 seed=2026 checks=1021 accepted=105 completed=105
+  coverage: 17/17 required bins
+PASS: M2 timeout=2 seed=1 checks=1080 accepted=107 completed=107
+  coverage: 24/24 required bins
+PASS: M2 timeout=2 seed=17 checks=1091 accepted=107 completed=107
+  coverage: 24/24 required bins
+PASS: M2 timeout=2 seed=2026 checks=1088 accepted=107 completed=107
+  coverage: 24/24 required bins
+PASS: M2 timeout=3 seed=1 checks=1158 accepted=107 completed=107
+  coverage: 25/25 required bins
+PASS: M2 timeout=3 seed=17 checks=1152 accepted=107 completed=107
+  coverage: 25/25 required bins
+PASS: M2 timeout=3 seed=2026 checks=1180 accepted=107 completed=107
+  coverage: 25/25 required bins
+PASS: M2 timeout=8 seed=1 checks=1522 accepted=107 completed=107
+  coverage: 30/30 required bins
+PASS: M2 timeout=8 seed=17 checks=1517 accepted=107 completed=107
+  coverage: 30/30 required bins
+PASS: M2 timeout=8 seed=2026 checks=1481 accepted=107 completed=107
+  coverage: 30/30 required bins
+PASS: 12 M2 runs; deterministic replay matched; build/m2/coverage.json
+python3 scripts/run_mutations.py
+PASS: detected lost-wake: M2: wake enters START
+PASS: detected early-clock-stop: scoreboard: unsafe clock shutdown with outstanding work
+PASS: positive control and 2/2 expected mutation failures; production RTL unchanged
+python3 scripts/run_m3.py
+PASS: M3 period=10:6 phase=0 start_delay=1 checks=234 wake_events=19
+PASS: M3 period=10:6 phase=0 start_delay=7 checks=233 wake_events=19
+PASS: M3 period=10:6 phase=1 start_delay=1 checks=234 wake_events=19
+PASS: M3 period=10:6 phase=1 start_delay=7 checks=233 wake_events=19
+PASS: M3 period=10:6 phase=4 start_delay=1 checks=234 wake_events=19
+PASS: M3 period=10:6 phase=4 start_delay=7 checks=233 wake_events=19
+PASS: M3 period=10:10 phase=0 start_delay=1 checks=239 wake_events=19
+PASS: M3 period=10:10 phase=0 start_delay=7 checks=239 wake_events=19
+PASS: M3 period=10:10 phase=1 start_delay=1 checks=238 wake_events=19
+PASS: M3 period=10:10 phase=1 start_delay=7 checks=238 wake_events=19
+PASS: M3 period=10:10 phase=4 start_delay=1 checks=238 wake_events=19
+PASS: M3 period=10:10 phase=4 start_delay=7 checks=238 wake_events=19
+PASS: M3 period=10:14 phase=0 start_delay=1 checks=243 wake_events=19
+PASS: M3 period=10:14 phase=0 start_delay=7 checks=243 wake_events=19
+PASS: M3 period=10:14 phase=1 start_delay=1 checks=243 wake_events=19
+PASS: M3 period=10:14 phase=1 start_delay=7 checks=243 wake_events=19
+PASS: M3 period=10:14 phase=4 start_delay=1 checks=243 wake_events=19
+PASS: M3 period=10:14 phase=4 start_delay=7 checks=243 wake_events=19
+PASS: M3 period=10:26 phase=0 start_delay=1 checks=258 wake_events=19
+PASS: M3 period=10:26 phase=0 start_delay=7 checks=256 wake_events=19
+PASS: M3 period=10:26 phase=1 start_delay=1 checks=259 wake_events=19
+PASS: M3 period=10:26 phase=1 start_delay=7 checks=256 wake_events=19
+PASS: M3 period=10:26 phase=4 start_delay=1 checks=256 wake_events=19
+PASS: M3 period=10:26 phase=4 start_delay=7 checks=256 wake_events=19
+PASS: 24 M3 runs, 18/18 scenarios per run; build/m3/coverage.json
+python3 scripts/run_m4.py
+PASS: M4 period=10:6 phase=1 delay=1 checks=145
+PASS: M4 period=10:6 phase=1 delay=5 checks=145
+PASS: M4 period=10:6 phase=4 delay=1 checks=145
+PASS: M4 period=10:6 phase=4 delay=5 checks=145
+PASS: M4 period=10:14 phase=1 delay=1 checks=145
+PASS: M4 period=10:14 phase=1 delay=5 checks=145
+PASS: M4 period=10:14 phase=4 delay=1 checks=145
+PASS: M4 period=10:14 phase=4 delay=5 checks=145
+PASS: M4 period=10:26 phase=1 delay=1 checks=145
+PASS: M4 period=10:26 phase=1 delay=5 checks=145
+PASS: M4 period=10:26 phase=4 delay=1 checks=145
+PASS: M4 period=10:26 phase=4 delay=5 checks=145
+PASS: 12 M4 runs, 15/15 scenarios per run; corrupted restore rejected

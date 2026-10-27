@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 517" role="img">
+<title>Normal sleep / wake (time in ns)</title>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="monospace" font-size="12" fill="#172b4d">
+<text x="16" y="24" font-size="18">Normal sleep / wake (time in ns)</text>
+<path d="M130.0,55 V447" stroke="#e5e9ef"/>
+<text x="130.0" y="47" text-anchor="middle">30</text>
+<path d="M190.0,55 V447" stroke="#e5e9ef"/>
+<text x="190.0" y="47" text-anchor="middle">35</text>
+<path d="M250.0,55 V447" stroke="#e5e9ef"/>
+<text x="250.0" y="47" text-anchor="middle">40</text>
+<path d="M310.0,55 V447" stroke="#e5e9ef"/>
+<text x="310.0" y="47" text-anchor="middle">45</text>
+<path d="M370.0,55 V447" stroke="#e5e9ef"/>
+<text x="370.0" y="47" text-anchor="middle">50</text>
+<path d="M430.0,55 V447" stroke="#e5e9ef"/>
+<text x="430.0" y="47" text-anchor="middle">55</text>
+<path d="M490.0,55 V447" stroke="#e5e9ef"/>
+<text x="490.0" y="47" text-anchor="middle">60</text>
+<path d="M550.0,55 V447" stroke="#e5e9ef"/>
+<text x="550.0" y="47" text-anchor="middle">65</text>
+<path d="M610.0,55 V447" stroke="#e5e9ef"/>
+<text x="610.0" y="47" text-anchor="middle">70</text>
+<path d="M670.0,55 V447" stroke="#e5e9ef"/>
+<text x="670.0" y="47" text-anchor="middle">75</text>
+<path d="M730.0,55 V447" stroke="#e5e9ef"/>
+<text x="730.0" y="47" text-anchor="middle">80</text>
+<path d="M790.0,55 V447" stroke="#e5e9ef"/>
+<text x="790.0" y="47" text-anchor="middle">85</text>
+<path d="M850.0,55 V447" stroke="#e5e9ef"/>
+<text x="850.0" y="47" text-anchor="middle">90</text>
+<path d="M910.0,55 V447" stroke="#e5e9ef"/>
+<text x="910.0" y="47" text-anchor="middle">95</text>
+<path d="M970.0,55 V447" stroke="#e5e9ef"/>
+<text x="970.0" y="47" text-anchor="middle">100</text>
+<path d="M1030.0,55 V447" stroke="#e5e9ef"/>
+<text x="1030.0" y="47" text-anchor="middle">105</text>
+<path d="M1090.0,55 V447" stroke="#e5e9ef"/>
+<text x="1090.0" y="47" text-anchor="middle">110</text>
+<path d="M1150.0,55 V447" stroke="#e5e9ef"/>
+<text x="1150.0" y="47" text-anchor="middle">115</text>
+<text x="12" y="85">state</text>
+<rect x="130.0" y="68" width="60.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="160.0" y="84" text-anchor="middle">RELEASE</text>
+<rect x="190.0" y="68" width="120.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="250.0" y="84" text-anchor="middle">RUN</text>
+<rect x="310.0" y="68" width="120.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="370.0" y="84" text-anchor="middle">DRAIN</text>
+<rect x="430.0" y="68" width="120.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="490.0" y="84" text-anchor="middle">ISOLATE</text>
+<rect x="550.0" y="68" width="120.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="610.0" y="84" text-anchor="middle">SLEEP</text>
+<rect x="670.0" y="68" width="240.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="790.0" y="84" text-anchor="middle">START</text>
+<rect x="910.0" y="68" width="120.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="970.0" y="84" text-anchor="middle">RELEASE</text>
+<rect x="1030.0" y="68" width="120.0" height="24" fill="#edf4ff" stroke="#3267a8"/>
+<text x="1090.0" y="84" text-anchor="middle">RUN</text>
+<text x="12" y="128">sleep_req</text>
+<path d="M130.0,133 H250.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M250.0,113 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M250.0,113 V133" stroke="#146b58" stroke-width="2"/>
+<text x="12" y="171">wake</text>
+<path d="M130.0,176 H610.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M610.0,156 H730.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M610.0,156 V176" stroke="#146b58" stroke-width="2"/>
+<path d="M730.0,176 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M730.0,156 V176" stroke="#146b58" stroke-width="2"/>
+<text x="12" y="214">idle</text>
+<path d="M130.0,219 H370.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M370.0,199 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M370.0,199 V219" stroke="#146b58" stroke-width="2"/>
+<text x="12" y="257">ready</text>
+<path d="M130.0,242 H610.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M610.0,262 H850.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M610.0,242 V262" stroke="#146b58" stroke-width="2"/>
+<path d="M850.0,242 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M850.0,242 V262" stroke="#146b58" stroke-width="2"/>
+<text x="12" y="300">clk_en</text>
+<path d="M130.0,285 H550.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M550.0,305 H670.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M550.0,285 V305" stroke="#146b58" stroke-width="2"/>
+<path d="M670.0,285 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M670.0,285 V305" stroke="#146b58" stroke-width="2"/>
+<text x="12" y="343">isolate</text>
+<path d="M130.0,328 H190.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M190.0,348 H310.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M190.0,328 V348" stroke="#146b58" stroke-width="2"/>
+<path d="M310.0,348 H430.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M430.0,328 H1030.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M430.0,328 V348" stroke="#146b58" stroke-width="2"/>
+<path d="M1030.0,348 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M1030.0,328 V348" stroke="#146b58" stroke-width="2"/>
+<text x="12" y="386">block_work</text>
+<path d="M130.0,371 H190.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M190.0,391 H310.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M190.0,371 V391" stroke="#146b58" stroke-width="2"/>
+<path d="M310.0,371 H1030.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M310.0,371 V391" stroke="#146b58" stroke-width="2"/>
+<path d="M1030.0,391 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<path d="M1030.0,371 V391" stroke="#146b58" stroke-width="2"/>
+<text x="12" y="429">fault</text>
+<path d="M130.0,434 H1150.0" stroke="#146b58" fill="none" stroke-width="2"/>
+<text x="16" y="475">55 ns: isolation asserted; 65 ns: clock disable requested.</text>
+<text x="16" y="493">95 ns: ready accepted; RELEASE guard lasts until work admission at 105 ns.</text>
+</g></svg>

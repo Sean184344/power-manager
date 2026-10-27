@@ -1,0 +1,55 @@
+name: HDL regression
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install HDL tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes iverilog yosys make python3
+
+      - name: Record tool versions
+        run: |
+          mkdir -p build
+          iverilog -V > build/tool-versions.log 2>&1
+          yosys -V >> build/tool-versions.log
+          python3 --version >> build/tool-versions.log
+          make --version >> build/tool-versions.log
+          cat build/tool-versions.log
+
+      - name: Run simulation, formal and synthesis
+        shell: bash
+        run: |
+          set -o pipefail
+          make check 2>&1 | tee build/check.log
+
+      - name: Reproduce annotated waveforms
+        run: |
+          python3 scripts/render_waveforms.py --vcd build/power_manager.vcd --output build/waveform-review
+          diff -u docs/images/sleep-wake.svg build/waveform-review/sleep-wake.svg
+          diff -u docs/images/start-timeout.svg build/waveform-review/start-timeout.svg
+
+      - name: Retain verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-${{ github.run_id }}-${{ github.run_attempt }}
+          path: build/
+          if-no-files-found: warn
+          retention-days: 14

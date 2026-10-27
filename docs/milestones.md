@@ -69,16 +69,22 @@ cell counts are 116 / 186 / 577 for the core / CDC / retention configurations,
 with zero inferred latches. No physical area, timing or power result is claimed.
 
 ## M6 — Portfolio and GitHub
-- [ ] Add architecture diagram, useful annotated waveforms and verification matrix.
-- [ ] Review code, limitations, license choice and README.
-- [ ] Add CI for regression and publish tested source/results to GitHub when requested.
-- [ ] Write resume bullets based only on measured results.
+- [x] Add architecture and FSM diagrams: `docs/architecture.md`.
+- [x] Add annotated normal-wake and start-timeout waveforms, captured VCD, source hashes and reproducible SVG renderer: `docs/waveforms.md`, `reports/m6/`.
+- [x] Add requirement-to-evidence verification matrix: `docs/verification-matrix.md`.
+- [x] Review state sequencing, documented limitations and README; review scope recorded in `docs/portfolio.md`.
+- [ ] Record the owner's license choice; no LICENSE file has been added.
+- [x] Publish the tested M5 source/results to GitHub as requested: `d136475800f6b3f1c1e3f6cf4831973db5143e26` on `main`.
+- [x] Add CI workflow for simulation, formal, synthesis, waveform reproduction and evidence retention; local YAML/configuration checks pass.
+- [ ] Publish reviewed M6 additions and confirm the first hosted CI run passes.
+- [x] Write resume bullets based only on measured results: `docs/portfolio.md`.
+- [x] Run simulation after documentation/rendering changes and clean full verification after CI setup; `make test` and `make check` exit 0. Logs: `reports/m6/test.log`, `reports/m6/check.log`.
 
-Current session: completed M5 with explicit proof assumptions, inductive safety
-and progress checks, reachability evidence, negative control and generic synthesis.
-All earlier simulation suites still pass. Stopped at the M5 boundary for user
-review; M6 remains pending. GitHub publication remains deferred.
+Current session (2026-10-27): M6 artifacts passed local review; publication is authorized. Fresh SVGs
+match the archived illustrations; capture hashes and Markdown file links pass.
+The RTL and formal harness match the archived M5 source hashes. Workflow YAML
+parses and its local settings were checked, but no hosted CI run is claimed.
 
-Next step: user review of M5. M6 adds portfolio diagrams, annotated waveforms,
-verification matrix, documentation/license review and CI. GitHub publication
-still requires an explicit request; begin M6 only after continuation is requested.
+M6 is not marked complete: the owner's license decision and publication/hosted
+CI verification remain pending. Publish M6 and inspect the hosted regression,
+then stop for milestone review. The M5 snapshot is already public.
